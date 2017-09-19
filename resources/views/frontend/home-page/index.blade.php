@@ -143,21 +143,98 @@
 		<div class="img" style="background-image: url('{{ asset('amadeo/images-base/produk-img-2.jpg') }}');"></div>
 	</div>
 
-	<div id="servis">
-		
+	<div id="servis" style="background-image: url('{{ asset('amadeo/images-base/servis-bg.jpg') }}');">
+		<div id="wrapper">
+			<div id="title">
+				<h2>SERVIS KAMI</h2>
+				<p>
+					Untuk menunjang kelengkapan dan pelayanan perusahaan kami, kami menyediakan jasa transportasi
+				</p>
+			</div>
+			<div id="sliders">
+				@for($a=0; $a<=2; $a++)
+				<div class="item">
+					<div class="wrapper">
+						<div class="to-center">
+							<div class="border">
+								<div class="img" style="background-image: url('{{ asset('amadeo/images-base/transport.jpg') }}');"></div>
+							</div>
+						</div>
+						<h4>Layanan Antar</h4>
+						<p>kami menyediakan pelayanan armada</p>
+						<p>angkut untuk pengiriman produk penjualan</p>
+					</div>
+				</div>
+				@endfor
+			</div>
+		</div>
+	</div>
+
+	<div id="klien">
+		<div id="wrapper">
+			<h2>KLIEN KAMI</h2>
+			<div id="sliders">
+				@for($a=1; $a<=4; $a++)
+				<div class="item">
+					<img class="img" src="{{ asset('amadeo/images-base/logo-klien-'.$a.'.png') }}">
+				</div>
+				@endfor
+			</div>
+		</div>
+	</div>
+
+	<div id="kontak">
+		<div id="wrapper">
+			<div id="title">
+				<h1>KONTAK</h1>
+				<h1><big>INFO</big></h1>
+			</div>
+			<div class="bar">
+				
+			</div>
+			<div class="bar">
+				
+			</div>
+			<div class="bar">
+				
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+	<div id="copy-right">
+		<label>© Copyright 2017 All Rights Reserved</label>
+		<label>Development By <img src="{{ asset('amadeo/images-base/logo-amadeo.png') }}"></label>
 	</div>
 @endsection
 
 @section('script')
 	<script type="text/javascript" src="{{ asset('amadeo/plugin/owl-carousel/owl.carousel.min.js') }}"></script>
 	<script type="text/javascript">
-		$("#sliders").owlCarousel({
+		$("#header #sliders").owlCarousel({
 			navigation : false,
 			items: 1,
 			singleItem:true,
 			pagination:false,
 			autoPlay: 3000,
 		    stopOnHover:false
+		});
+		$("#servis #sliders").owlCarousel({
+			navigation : true,
+			items: 1,
+			singleItem:true,
+			pagination:false,
+			autoPlay: false,
+		    navigationText : ["<img src='{{ asset('amadeo/images-base/panah.png') }}'>","<img src='{{ asset('amadeo/images-base/panah.png') }}'>"]
+		});
+		$("#klien #sliders").owlCarousel({
+			navigation : false,
+			items: 2,
+			singleItem:false,
+			pagination:false,
+			autoPlay: 3000,
+		    stopOnHover:false
+
 		});
 	</script>
 @endsection
