@@ -1,0 +1,247 @@
+/* public */
+	body{
+		background-color: white;
+		margin: 0;
+		padding: 0;
+	}
+	.clearfix{
+		clear: both;
+	}
+	.btn-purple{
+		margin: 0px auto;
+		background-color: rgb(46,49,146);
+		border: none;
+		border-radius: 60px;
+		padding: 10px 30px;
+		color: rgb(255,255,255);
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+/* public */
+
+/* navigasi */
+	/* normal */
+		#navigasi{
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 20;
+		}
+		#navigasi #contact,
+		#navigasi #content{
+			position: relative;
+			width: 85%;
+			margin: 0 auto;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+		#navigasi #contact{
+			text-align: right;
+		}
+		#navigasi #contact label{
+			margin-right: 30px;
+			color: rgb(255,255,255);
+		}
+		#navigasi #contact label img{
+			width: 15px;
+			margin-right: 5px;
+		    filter: grayscale(100%) brightness(-100%) invert(100%);
+		}
+		#navigasi #content{
+			padding-right: 10px;
+			padding-left: 10px;
+			background-color: rgb(255,255,255);
+		}
+		#navigasi #content .wrapper:nth-child(odd){
+			float: left;
+		}
+		#navigasi #content .wrapper:nth-child(even){
+			float: right;
+		}
+		#navigasi #content .wrapper{
+			display: table;
+		}
+		#navigasi #content .wrapper .bar{
+			display: table-cell;
+			vertical-align: middle;
+			height: 60px;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+		#navigasi #content .wrapper #logo.bar img{
+			height: 50px;
+		}
+		#navigasi #content .wrapper #name.bar h1{
+			margin: 0;
+			font-size: 26px;
+		}
+		#navigasi #content .wrapper #name.bar h1,
+		#navigasi #content .wrapper .bar a{
+			text-transform: uppercase;
+			text-decoration: none;
+			color: rgb(0,0,0);
+		}
+		#navigasi #content .wrapper .bar a{
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+	/* normal */
+	/* in scroll*/
+	/* in scroll*/
+/* navigasi */
+
+/* header */
+	#header{
+		position: relative;
+		margin: 0;
+		padding: 0;
+		height: 160vh;
+	}
+	/* slider */
+		#header #sliders{
+			position: relative;
+			width: 100%;
+			margin: 0;
+			padding: 0;	
+		}
+		#header #sliders .item{
+			position: relative;
+			height: 160vh;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		#header #sliders .item .title{
+			position: absolute;
+			top: 40vh;
+			left: 10vw;
+		}
+		#header #sliders .item .title h1{
+			margin: 0;
+			text-transform: uppercase;
+			color: rgb(255,255,255);
+		}
+	/* slider */
+	/* psp */
+		#header #psp{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+		#header #psp #content{
+			position: absolute;
+			bottom: 30vh;
+			right: 10vw;
+			width: 25vw;
+			z-index: 1;
+			padding: 20px;
+			background-color: rgb(255,255,255);
+			border-right: 3px solid rgb(46,49,146);
+			border-bottom: 3px solid rgb(46,49,146);
+			box-shadow: 3px 3px 10px rgb(58,58,58);
+		}
+		#header #psp #content p{
+			margin: 0;
+			font-size: 26px;
+			margin-bottom: 20px;
+		}
+		#header #psp #content input{
+			display: block;
+			width: 96%;
+			margin-bottom: 15px;
+			padding: 2%;
+		    font-size: 14px;
+		    line-height: 1.42857143;
+			background-color: #fff;
+		    background-image: none;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    border-color: rgb(58,58,58);
+		}
+		#header #psp button{
+			margin: 30px auto;
+		}
+		#header #psp #bg{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+	/* psp */
+/* header */
+
+/* tentang kami */
+	#tentang-kami{
+		position: relative;
+		margin: 0;
+		padding: 0;
+	}
+	#tentang-kami #set-up{
+		position: relative;
+		width: 85%;
+		margin: 0 auto;
+	}
+	#tentang-kami #set-up .wrapper{
+		float: left;
+		width: 50%;
+	}
+	#tentang-kami #set-up .wrapper img{
+		position: relative;
+		top: -20px;
+		width: 100%;
+	}
+	#tentang-kami #set-up .wrapper #title{
+		position: relative;
+		top: -20px;
+	}
+	#tentang-kami #set-up .wrapper #title h2{
+		margin: 0;
+		color: rgb(0,0,0);
+	}
+	#tentang-kami #set-up .wrapper p{
+		text-align: justify;
+		color: rgb(61,61,61);
+	}
+	#tentang-kami #set-up .wrapper #href{
+		text-align: center;
+		margin: 60px auto;
+	}
+/* tentang kami */
+
+/* produk */
+	#produk{
+		position: relative;
+		display: table;
+		margin: 0;
+		padding: 0;
+	}
+	#produk .img,
+	#produk #description{
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		display: table-cell;
+		height: 80vh;
+		vertical-align: middle;
+	}
+	#produk .img{
+		width: 35%;
+	}
+	#produk #description{
+		width: 30%;
+		text-align: center;
+	}
+	#produk #description #title{
+		margin-bottom: 15vh;
+	}
+	#produk #description #title h2{
+		font-size: 32px;
+		margin: 0;
+	}
+	#produk #description p{
+		width: 75%;
+		margin: 0 auto;
+		margin-bottom: 15vh;
+		line-height: 1.61;
+		color: rgb(61,61,61);
+	}
+/* produk */

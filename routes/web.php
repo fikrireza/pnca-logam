@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// START FRONTEND
+  Route::get('/', function () {
+    return view('frontend.home-page.index');
+  });
+// END FRONTEND
 
 // START BACKEND
   // Auth::routes();
