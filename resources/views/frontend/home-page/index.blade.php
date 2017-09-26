@@ -8,6 +8,8 @@
 @endsection
 
 @section('style')
+	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/kontak-footer.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/form-style.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/home.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/plugin/owl-carousel/owl.carousel.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/plugin/owl-carousel/owl.theme.css') }}">
@@ -15,55 +17,6 @@
 @endsection
 
 @section('body')
-	<div id="navigasi">
-		<div id="contact">
-			<label>
-				<img src="{{ asset('amadeo/images-base/phone.png') }}"> 021 5417203	
-			</label>
-			<label>
-				<img src="{{ asset('amadeo/images-base/mail.png') }}"> pancalogam@ymail.com
-			</label>
-		</div>
-		<div id="content">
-			<div class="wrapper">
-				<div id="logo" class="bar">
-					<img src="{{ asset('amadeo/images-base/logo-pancalogam.png') }}">
-				</div>
-				<div id="name" class="bar">
-					<h1>PT. PANCA LOGAM SUKSES MANDIRI</h1>
-				</div>
-			</div>
-			<div class="wrapper">
-				<div class="bar">
-					<a href="">
-						BRANDA
-					</a>
-				</div>
-				<div class="bar">
-					<a href="">
-						TENTANG KAMI
-					</a>
-				</div>
-				<div class="bar">
-					<a href="">
-						STANDAR
-					</a>
-				</div>
-				<div class="bar">
-					<a href="">
-						SCRAP
-					</a>
-				</div>
-				<div class="bar">
-					<a href="">
-						KONTAK
-					</a>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-
 	<div id="header">
 		<div id="sliders">
 			@for($a=0; $a<=2; $a++)
@@ -78,21 +31,48 @@
 		<div id="psp">
 			<div id="content">
 				<p>Dapatkan <b>Produk Standar</b> Untuk <b>Proyek</b> Anda</p>
-				<form>
+				<form id="form-produk"  class="form-style" method="post" action="{{ route('frontend.permintaan.list.produk') }}">
+			        {{ csrf_field() }}
+					@if(Session::has('alert_plp'))
+						<script>
+						  window.setTimeout(function() {
+						    $("#alret-form-produk").fadeTo(700, 0).slideUp(700, function(){
+						        $(this).remove();
+						    });
+						  }, 5000);
+						</script>
+				        <div id="alret-form-produk" class="alert {{ Session::get('alert_plp') }}">
+				        	<strong>{{ Session::get('info_plp') }}</strong>
+				        </div>
+					@endif
+					@if($errors->has('name_plp'))
+						<span>{{ $errors->first('name_plp')}}</span>
+					@endif
 					<input 
 						type="text" 
-						name="name"
-						placeholder="Name" 
+						name="name_plp"
+						placeholder="Name"
+						value="{{ old('name_plp') }}"
+						{{ Session::has('autofocus_plp') ? 'autofocus' : ''}}
 					>
+					@if($errors->has('email_plp'))
+						<span>{{ $errors->first('email_plp')}}</span>
+					@endif
 					<input 
 						type="email" 
-						name="email"
+						name="email_plp"
 						placeholder="Email" 
+						value="{{ old('email_plp') }}"
 					>
+					@if($errors->has('phone_plp'))
+						<span>{{ $errors->first('phone_plp')}}</span>
+					@endif
 					<input 
 						type="text" 
-						name="phone"
+						name="phone_plp"
 						placeholder="Phone" 
+						value="{{ old('phone_plp') }}"
+						onkeypress="return isNumber(event)"
 					>
 					<div style="text-align: center;">
 						<button class="btn-purple" type="submit">SUBMIT</button>
@@ -136,7 +116,7 @@
 			<p>
 				Produk standar merupakan produk besi baru yang memenuhi standar international. produk ini banyak digunakan dalam proyek proyek besar. seperti pembuatan pabrik, jalan raya, jembatan dan sarana umum lainya. Untuk tau lebih dalam dan melihat jenis besi apa saja yang kami miliki  silahkan klik tombol dibawah ini
 			</p>
-			<div id="href">
+			<div class="text-center">
 				<a href="" class="btn-purple">LIHAT</a>
 			</div>
 		</div>
@@ -183,58 +163,12 @@
 		</div>
 	</div>
 
-	<div id="kontak">
-		<div id="wrapper">
-			<div id="title">
-				<h1>KONTAK</h1>
-				<h1><big>INFO</big></h1>
-			</div>
-			<div class="bar">
-				
-			</div>
-			<div class="bar">
-				
-			</div>
-			<div class="bar">
-				
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-
-	<div id="copy-right">
-		<label>© Copyright 2017 All Rights Reserved</label>
-		<label>Development By <img src="{{ asset('amadeo/images-base/logo-amadeo.png') }}"></label>
-	</div>
+	@include('frontend._include.kontak-footer')
 @endsection
 
 @section('script')
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<script type="text/javascript" src="{{ asset('amadeo/plugin/owl-carousel/owl.carousel.min.js') }}"></script>
-	<script type="text/javascript">
-		$("#header #sliders").owlCarousel({
-			navigation : false,
-			items: 1,
-			singleItem:true,
-			pagination:false,
-			autoPlay: 3000,
-		    stopOnHover:false
-		});
-		$("#servis #sliders").owlCarousel({
-			navigation : true,
-			items: 1,
-			singleItem:true,
-			pagination:false,
-			autoPlay: false,
-		    navigationText : ["<img src='{{ asset('amadeo/images-base/panah.png') }}'>","<img src='{{ asset('amadeo/images-base/panah.png') }}'>"]
-		});
-		$("#klien #sliders").owlCarousel({
-			navigation : false,
-			items: 2,
-			singleItem:false,
-			pagination:false,
-			autoPlay: 3000,
-		    stopOnHover:false
-
-		});
-	</script>
+	<script type="text/javascript" src="{{ asset('amadeo/js/func-input-only-number.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('amadeo/js/home.js') }}"></script>
 @endsection

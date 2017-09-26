@@ -1,0 +1,27 @@
+/* kanit */
+    @font-face {
+        font-family: 'kanit';
+        font-weight: lighter;
+        src: url('../font/Kanit/Kanit-Light.ttf');
+    }
+/* kanit */
+
+/* roboto */
+    @font-face{
+        font-family: 'roboto regular';
+        src: url('../font/Roboto/Roboto-Regular.ttf');
+    }
+    @font-face{
+        font-family: 'roboto black';
+        src: url('../font/Roboto/Roboto-Black.ttf');
+    }
+    @font-face{
+        font-family: 'roboto medium';
+        src: url('../font/Roboto/Roboto-Medium.ttf');
+    }
+    @font-face{
+        font-family: 'roboto';
+        font-weight: bold;
+        src: url('../font/Roboto/Roboto-Bold.ttf');
+    }
+/* roboto */

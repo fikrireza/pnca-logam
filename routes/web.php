@@ -12,9 +12,20 @@
 */
 
 // START FRONTEND
-  Route::get('/', function () {
-    return view('frontend.home-page.index');
-  });
+  Route::get('/', 'Frontend\FrontendController@home')
+    ->name('frontend.home');
+  
+  Route::post('/permintaan-list-produk', 'Frontend\FrontendController@permintaanListProduk')
+    ->name('frontend.permintaan.list.produk');
+
+  Route::get('/tentang-kami', 'Frontend\FrontendController@tentangKami')
+    ->name('frontend.tentang-kami');
+
+  Route::get('/kontak', 'Frontend\FrontendController@kontak')
+    ->name('frontend.kontak');
+  Route::post('/kontak/simpan', 'Frontend\FrontendController@kontakSimpan')
+    ->name('frontend.kontak.simpan');
+  
 // END FRONTEND
 
 // START BACKEND

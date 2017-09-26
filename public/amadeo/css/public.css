@@ -1,0 +1,164 @@
+/* public */
+	body{
+		background-color: white;
+		margin: 0;
+		padding: 0;
+	}
+	.alert{
+		padding: 15px;
+		padding-right: 35px;
+		margin-bottom: 20px;
+		border: 1px solid transparent;
+		border-radius: 4px;
+	}
+	.alert-danger{
+		color: #a94442;
+		background-color: #f2dede;
+		border-color: #ebccd1;
+	}
+	.alert-success{
+		color: #3c763d;
+		background-color: #dff0d8;
+		border-color: #d6e9c6;
+	}
+	.btn-purple{
+		margin: 0px auto;
+		background-color: rgb(46,49,146);
+		border: none;
+		border-radius: 60px;
+		padding: 10px 30px;
+		color: rgb(255,255,255);
+		text-transform: uppercase;
+		text-decoration: none;
+		cursor: pointer;
+		font-family: 'roboto';
+        font-weight: bold;
+	}
+	.clearfix{
+		clear: both;
+	}
+	.text-center{
+		text-align: center;
+	}
+/* public */
+
+/* navigasi */
+	/* normal */
+		#navigasi{
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 20;
+			transition: all 1.15s;
+		}
+		#navigasi #contact,
+		#navigasi #content{
+			position: relative;
+			width: 85%;
+			margin: 0 auto;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			transition: all 1.15s;
+		}
+		#navigasi #contact{
+			text-align: right;
+		}
+		#navigasi #contact label{
+			margin-right: 30px;
+			color: rgb(255,255,255);
+		    font-family: 'kanit';
+		    font-weight: lighter;
+		}
+		#navigasi #contact label img{
+			width: 15px;
+			margin-right: 5px;
+		    filter: grayscale(100%) brightness(-100%) invert(100%);
+		}
+		#navigasi #content{
+			padding-right: 10px;
+			padding-left: 10px;
+			background-color: rgb(255,255,255);
+		}
+		#navigasi #content .wrapper:nth-child(odd){
+			float: left;
+		}
+		#navigasi #content .wrapper:nth-child(even){
+			float: right;
+		}
+		#navigasi #content .wrapper{
+			display: table;
+		}
+		#navigasi #content .wrapper .bar{
+			display: table-cell;
+			vertical-align: middle;
+			height: 60px;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+		#navigasi #content .wrapper #logo.bar img{
+			height: 50px;
+		}
+		#navigasi #content .wrapper #name.bar h1{
+			margin: 0;
+			font-size: 26px;
+		}
+		#navigasi #content .wrapper #name.bar h1,
+		#navigasi #content .wrapper .bar a{
+			text-transform: uppercase;
+			text-decoration: none;
+			color: rgb(0,0,0);
+		}
+		#navigasi #content .wrapper .bar a{
+			margin-left: 5px;
+			margin-right: 5px;
+			font-family: 'roboto regular';
+		}
+	/* normal */
+	/* in scroll*/
+		#navigasi.in-scroll{
+			box-shadow: 0px 1px 5px rgb(88,88,88);
+		}
+		#navigasi.in-scroll #contact{
+			padding-top: 0;
+			padding-bottom: 0;
+			height: 0;
+		}
+		#navigasi.in-scroll #contact label{
+			font-size: 0;
+		}
+		#navigasi.in-scroll #contact label img{
+			width: 0;
+		}
+		#navigasi.in-scroll #content{
+			width: 100%;
+		}
+		#navigasi.in-scroll #content .wrapper:nth-child(even){
+			padding-right: 10px;
+		}
+	/* in scroll*/
+/* navigasi */
+
+/* copy right */
+	#copy-right{
+		position: relative;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		width: 100%;
+		text-align: center;
+		background-color: rgb(0,0,0);
+	}
+	#copy-right label{
+		position: relative;
+		color: rgb(255,255,255);
+		padding: 0 10px;
+		font-family: 'roboto regular';
+	}
+	#copy-right label:nth-child(odd){
+		border-right: .5px solid white;
+	}
+	#copy-right label img{
+		position: absolute;
+		margin-left: 20px;
+		bottom: -10px;
+	}
+/* copy right */

@@ -1,0 +1,131 @@
+/* header */
+	#header{
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	#header #wrapper{
+		position: absolute;
+		bottom: -1vh;
+		width: 100%;
+	}
+	#header #wrapper img{
+		width: 100%;
+	}
+/* header */
+
+/* tentang kami */
+	#tentang-kami{
+		position: relative;
+		width: 100%;
+	}
+	#tentang-kami #wrapper{
+		position: relative;
+		width: 85%;
+		margin: 0 auto;
+	}
+	/* title */
+		#tentang-kami #wrapper #title{
+			position: absolute;
+			top: -17.5vh;
+		}
+		#tentang-kami #wrapper #title h1{
+			margin: 0;
+			font-family: 'roboto black';
+			font-size: 42px;
+		}
+	/* title */
+	/* content */
+		#tentang-kami #wrapper #content{
+			position: relative;
+			padding-top: 2.5vh;
+			padding-bottom: 2.5vh;
+		}
+		#tentang-kami #wrapper #content .bar{
+			float: left;
+			width: 50%;
+		}
+		#tentang-kami #wrapper #content .bar:nth-child(odd) p{
+			padding-right: 2.5%;
+		}
+		#tentang-kami #wrapper #content .bar:nth-child(even) p{
+			padding-left: 2.5%;
+		}
+		#tentang-kami #wrapper #content .bar p{
+			text-indent: 50px;
+			line-height: 1.61;
+			font-family: 'kanit';
+	        font-weight: lighter;
+		}
+	/* content */
+/* tentang kami */
+
+/* visi misi */
+	#visi-misi{
+		position: relative;
+		width: 100%;
+		background-color: rgb(242,242,242);
+	}
+	#visi-misi #wrapper{
+		position: relative;
+		width: 100%;
+		padding: 40px 0;
+	}
+	#visi-misi #wrapper #img.bar{
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	#visi-misi #wrapper .bar{
+		position: relative;
+		float: left;
+		width: 50%;
+		height: 60vh;
+	}
+	#visi-misi #wrapper .bar #visi{
+		position: relative;
+		width: 60%;
+		margin-left: 5%;
+		margin-right: 25%;
+		text-align: left;
+	}
+	#visi-misi #wrapper .bar #visi h1{
+		margin: 0;
+		margin-bottom: 20px;
+		font-family: 'roboto black';
+	}
+	#visi-misi #wrapper .bar #visi p{
+		font-family: 'kanit';
+        font-weight: lighter;
+	}
+	#visi-misi #wrapper .bar #misi{
+		position: absolute;
+		z-index: 1;
+		bottom: -40px;
+		right: 2.5vw;
+		width: 60vw;
+		background-color: rgba(0,84,166,.7);
+	}
+	#visi-misi #wrapper .bar #misi #wrapper{
+		width: 60%;
+		margin-left: 25%;
+		margin-right: 5%;
+		padding: 0;
+		text-align: right;
+	}
+	#visi-misi #wrapper .bar #misi #wrapper h1{
+		margin-top: 20px;
+		margin-bottom: 10px;
+		color: white;
+		font-family: 'roboto black';
+	}
+	#visi-misi #wrapper .bar #misi #wrapper p{
+		color: white;
+		margin-bottom: 20px;
+		font-family: 'kanit';
+        font-weight: lighter;
+	}
+/* visi misi */

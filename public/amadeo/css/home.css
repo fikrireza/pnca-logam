@@ -1,95 +1,3 @@
-/* public */
-	body{
-		background-color: white;
-		margin: 0;
-		padding: 0;
-	}
-	.clearfix{
-		clear: both;
-	}
-	.btn-purple{
-		margin: 0px auto;
-		background-color: rgb(46,49,146);
-		border: none;
-		border-radius: 60px;
-		padding: 10px 30px;
-		color: rgb(255,255,255);
-		text-transform: uppercase;
-		text-decoration: none;
-	}
-/* public */
-
-/* navigasi */
-	/* normal */
-		#navigasi{
-			position: fixed;
-			top: 0;
-			width: 100%;
-			z-index: 20;
-		}
-		#navigasi #contact,
-		#navigasi #content{
-			position: relative;
-			width: 85%;
-			margin: 0 auto;
-			padding-top: 5px;
-			padding-bottom: 5px;
-		}
-		#navigasi #contact{
-			text-align: right;
-		}
-		#navigasi #contact label{
-			margin-right: 30px;
-			color: rgb(255,255,255);
-		}
-		#navigasi #contact label img{
-			width: 15px;
-			margin-right: 5px;
-		    filter: grayscale(100%) brightness(-100%) invert(100%);
-		}
-		#navigasi #content{
-			padding-right: 10px;
-			padding-left: 10px;
-			background-color: rgb(255,255,255);
-		}
-		#navigasi #content .wrapper:nth-child(odd){
-			float: left;
-		}
-		#navigasi #content .wrapper:nth-child(even){
-			float: right;
-		}
-		#navigasi #content .wrapper{
-			display: table;
-		}
-		#navigasi #content .wrapper .bar{
-			display: table-cell;
-			vertical-align: middle;
-			height: 60px;
-			padding-left: 5px;
-			padding-right: 5px;
-		}
-		#navigasi #content .wrapper #logo.bar img{
-			height: 50px;
-		}
-		#navigasi #content .wrapper #name.bar h1{
-			margin: 0;
-			font-size: 26px;
-		}
-		#navigasi #content .wrapper #name.bar h1,
-		#navigasi #content .wrapper .bar a{
-			text-transform: uppercase;
-			text-decoration: none;
-			color: rgb(0,0,0);
-		}
-		#navigasi #content .wrapper .bar a{
-			margin-left: 5px;
-			margin-right: 5px;
-		}
-	/* normal */
-	/* in scroll*/
-	/* in scroll*/
-/* navigasi */
-
 /* header */
 	#header{
 		position: relative;
@@ -120,6 +28,8 @@
 			margin: 0;
 			text-transform: uppercase;
 			color: rgb(255,255,255);
+			font-family: 'roboto black';
+			font-size: 42px;
 		}
 	/* slider */
 	/* psp */
@@ -144,19 +54,11 @@
 			margin: 0;
 			font-size: 26px;
 			margin-bottom: 20px;
+			font-family: 'roboto regular';
 		}
-		#header #psp #content input{
-			display: block;
-			width: 96%;
-			margin-bottom: 15px;
-			padding: 2%;
-		    font-size: 14px;
-		    line-height: 1.42857143;
-			background-color: #fff;
-		    background-image: none;
-		    border: 1px solid #ccc;
-		    border-radius: 4px;
-		    border-color: rgb(58,58,58);
+		#header #psp #content p b{
+			font-family: 'roboto';
+	        font-weight: bold;
 		}
 		#header #psp button{
 			margin: 30px auto;
@@ -196,10 +98,15 @@
 	#tentang-kami #set-up .wrapper #title h2{
 		margin: 0;
 		color: rgb(0,0,0);
+		font-family: 'roboto black';
+		font-size: 42px;
 	}
 	#tentang-kami #set-up .wrapper p{
+		line-height: 1.41;
 		text-align: justify;
 		color: rgb(61,61,61);
+		font-family: 'kanit';
+        font-weight: lighter;
 	}
 	#tentang-kami #set-up .wrapper #href{
 		text-align: center;
@@ -234,8 +141,9 @@
 		margin-bottom: 10vh;
 	}
 	#produk #description #title h2{
-		font-size: 32px;
 		margin: 0;
+		font-size: 38px;
+		font-family: 'roboto black';
 	}
 	#produk #description p{
 		width: 75%;
@@ -243,6 +151,8 @@
 		margin-bottom: 10vh;
 		line-height: 1.61;
 		color: rgb(61,61,61);
+		font-family: 'kanit';
+        font-weight: lighter;
 	}
 /* produk */
 
@@ -268,16 +178,20 @@
 		#servis #wrapper #title h2{
 			color: rgb(46,49,146);
 			text-transform: uppercase;
-			font-size: 32px;
 			margin-top: 0;
 			margin-bottom: 20px;
 			padding-bottom: 20px;
 			border-bottom: 1px solid rgb(46,49,146);
+			font-size: 38px;
+			font-family: 'roboto black';
 		}
 		#servis #wrapper #title p{
 			width: 55%;
 			margin: 0 auto;
 			color: rgb(61,61,61);
+			font-family: 'kanit';
+	        font-weight: lighter;
+			font-size: 14px;
 		}
 	/* title */
 	/* slider */
@@ -314,16 +228,20 @@
 			border-radius: 100%;
 		}
 		#servis #wrapper #sliders .item h4{
-			font-size: 26px;
 			margin-top: 10px;
 			margin-bottom: 20px;
+			font-size: 26px;
+			font-family: 'roboto black';
 		}
 		#servis #wrapper #sliders .item p{
 			margin: 0 auto;
+			font-family: 'kanit';
+	        font-weight: lighter;
+			font-size: 14px;
 		}
 		#servis #wrapper #sliders .owl-controls{
 			position: absolute;
-			top: -105px;
+			top: -110px;
 			width: 100%;
 		}
 		#servis #wrapper #sliders .owl-controls .owl-buttons div{
@@ -359,7 +277,7 @@
 	#klien #wrapper{
 		position: relative;
 		margin: 0 auto;
-		width: 85%;
+		width: 65%;
 		text-align: center;
 	}
 	#klien #wrapper h2{
@@ -367,58 +285,10 @@
 		margin-bottom: 40px;
 		text-transform: uppercase;
 		color: rgb(255,255,255);
-		font-size: 26px;
+		font-size: 38px;
+		font-family: 'roboto black';
 	}
 	#klien #wrapper #sliders .item img.img{
 		height: 40px;
 	}
 /* klien */
-
-/* kontak */
-	#kontak{
-		position: relative;
-		margin: 0;
-		padding: 0;
-		padding-top: 20px;
-		padding-bottom: 20px;
-		background-color: rgb(242,242,242);
-	}
-	#kontak #wrapper{
-		position: relative;
-		width: 85%;
-		margin: 0 auto;
-		padding: 0;
-	}
-	#kontak #wrapper #title{
-
-	}
-	#kontak #wrapper #title h1{
-		margin: 0;
-	}
-	#kontak #wrapper .bar{
-		float: left;
-		width: 33.33%;
-		padding: 2.5%;
-	}
-/* kontak */
-
-/* copy right */
-	#copy-right{
-		position: relative;
-		padding-top: 15px;
-		padding-bottom: 15px;
-		width: 100%;
-		text-align: center;
-		background-color: rgb(0,0,0);
-	}
-	#copy-right label{
-		position: relative;
-		color: rgb(255,255,255);
-		margin: 0 10px;
-	}
-	#copy-right label img{
-		position: absolute;
-		margin-left: 20px;
-		bottom: -10px;
-	}
-/* copy right */

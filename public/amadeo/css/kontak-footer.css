@@ -1,0 +1,109 @@
+/* kontak */
+	#kontak{
+		position: relative;
+		margin: 0;
+		padding: 0;
+		padding-top: 40px;
+		padding-bottom: 20px;
+		background-color: rgb(242,242,242);
+	}
+	#kontak #wrapper{
+		position: relative;
+		width: 85%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	#kontak #wrapper #title{
+		padding: 10px 15px;
+		position: relative;
+	}
+	#kontak #wrapper #title #border-top{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 5vw;
+		border-top: .5px solid rgb(46,49,146);
+	}
+	#kontak #wrapper #title #border-left{
+		border-left: .5px solid rgb(46,49,146);
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 10vh;
+	}
+	#kontak #wrapper #title h1{
+		margin: 0;
+		font-family: 'roboto medium';
+	}
+	#kontak #wrapper #title h1 b{
+		font-family: 'roboto';
+        font-weight: bold;
+	}
+	#kontak #wrapper .bar{
+		float: left;
+		width: 30%;
+		padding: 1%;
+	}
+	/* info */
+		#kontak #wrapper .bar .rows{
+			display: table;
+			width: 100%;
+		}
+		#kontak #wrapper .bar .rows .cell{
+			display: table-cell;
+			vertical-align: middle;
+			height: 45px;
+			padding: 0 10px;
+		}
+		#kontak #wrapper .bar .rows .cell:nth-child(odd){
+			width: 15%;
+			text-align: center;
+		}
+		#kontak #wrapper .bar .rows .cell:nth-child(even){
+			width: 85%;
+		}
+		#kontak #wrapper .bar .rows .cell p{
+			margin: 0;
+			font-family: 'kanit';
+	        font-weight: lighter;
+		}
+		#kontak #wrapper .bar #temukan-kami h3{
+			margin: 20px auto;
+			font-family: 'roboto medium';
+		}
+		#kontak #wrapper .bar #temukan-kami img{
+			width: 40px;
+			display: inline-grid;
+			margin: 0 2.5px;
+		}
+	/* info */
+	/* form */
+		#kontak #wrapper .bar form input,
+		#kontak #wrapper .bar form textarea{
+			background-color: rgb(242,242,242);
+		}
+		#kontak #wrapper .bar form .submit-wrapper span{
+			position: absolute;
+			left: -25%;
+			top: -20%;
+		}
+		#kontak #wrapper .bar .submit-wrapper{
+			position: relative;
+			height: 80px;
+			text-align: right;
+		}
+		#kontak #wrapper .bar .submit-wrapper .g-recaptcha{
+			position: absolute;
+		    left: -25%;
+		    height: 80px;
+		    overflow: hidden;
+		}
+	/* form */
+	/* maps */
+		#kontak #wrapper .bar iframe{
+			width: 100%;
+			height: 45vh;
+			margin-bottom: 20px;
+		}
+	/* maps */
+/* kontak */
