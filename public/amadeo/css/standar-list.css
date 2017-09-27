@@ -1,0 +1,122 @@
+/* banner */
+	#banner{
+		position: relative;
+		width: 100%;
+		height: 70vh;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+/* banner */
+
+/* list standar */
+	#list-standar{
+		position: relative;
+		width: 100%;
+	}
+	#list-standar img.teksture{
+		position: absolute;
+	}
+	#list-standar img#top.teksture{
+		top: -110px;
+	    left: 0;
+	    z-index: -1;
+	}
+	#list-standar img#bottom.teksture{
+		bottom: -80px;
+		right: 0;
+	}
+	#list-standar #wrapper{
+		width: 85%;
+		margin: 0 auto;
+		margin-top: 60px;
+		padding-top: 40px;
+	}
+	#list-standar #wrapper h1{
+		margin: 0;
+		text-transform: uppercase;
+		font-family: 'roboto medium';
+		font-size: 38px;
+	}
+	#list-standar #wrapper h1 b{
+		font-family: 'roboto black';
+		font-size: 42px;
+	}
+	#list-standar #wrapper #list{
+		margin-top: 40px;
+		margin-bottom: 60px;
+	}
+	#list-standar #wrapper #list .bar{
+		position: relative;
+		float: left;
+		width: 33.33%;
+		height: 50vh;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	#list-standar #wrapper #list .bar #descript{
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		background-color: rgba(46,49,166,.5);
+		position: absolute;
+	}
+	#list-standar #wrapper #list .bar #descript h2{
+		margin: 0;
+		padding: 40px 0;
+		color: white;
+		text-transform: uppercase;
+		font-size: 26px;
+		font-family: 'roboto black';
+	}
+	#list-standar #wrapper #list .bar #descript p{
+		width: 75%;
+		margin: 0 auto;
+		color: white;
+		line-height: 1.41;
+		font-family: 'kanit';
+        font-weight: lighter;
+	}
+	#list-standar #wrapper #list .bar #descript .text-center{
+		margin-top: 40px;
+	}
+	#list-standar #wrapper #list .bar #descript .text-center a{
+		font-family: 'kanit';
+        font-weight: lighter;
+        padding: 5px 20px;
+	}
+	/* hover efek */
+		#list-standar #wrapper #list .bar #descript{
+			top: 30vh;
+			background-color: rgba(46,49,166,0);
+			transition: all .51s;
+		}
+		#list-standar #wrapper #list .bar #descript p,
+		#list-standar #wrapper #list .bar #descript .text-center{
+			visibility: hidden;
+			opacity: 0;
+			transition: all .51s;
+		}
+		#list-standar #wrapper #list .bar:hover #descript{
+			top: 0vh;
+			background-color: rgba(46,49,166,.5);
+		}
+		#list-standar #wrapper #list .bar:hover #descript p,
+		#list-standar #wrapper #list .bar:hover #descript .text-center{
+			visibility: visible;
+			opacity: 1;
+		}
+
+	/* hover efek */
+	#list-standar #wrapper #list .owl-controls .owl-buttons div{
+		background-color: rgba(0,0,0,0);
+	}
+	#list-standar #wrapper #list .owl-controls .owl-buttons div img{
+		width: 20px;
+	}
+	#list-standar #wrapper #list .owl-controls .owl-buttons .owl-prev{
+		transform: rotateY(180deg);
+	}
+/* list standar */

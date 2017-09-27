@@ -29,6 +29,7 @@
 	</div>
 
 	<div id="body">
+		<img id="top" class="teksture" src="{{ asset('amadeo/images-base/tekstur.png') }}">
 		<div id="to-up">
 			<div id="wrapper">
 				<div id="kirim-pesan" class="bar">
@@ -150,6 +151,7 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
+		<img id="bottom" class="teksture" src="{{ asset('amadeo/images-base/tekstur.png') }}">
 	</div>
 @endsection
 

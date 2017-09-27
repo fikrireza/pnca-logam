@@ -12,19 +12,38 @@
 */
 
 // START FRONTEND
-  Route::get('/', 'Frontend\FrontendController@home')
-    ->name('frontend.home');
   
-  Route::post('/permintaan-list-produk', 'Frontend\FrontendController@permintaanListProduk')
-    ->name('frontend.permintaan.list.produk');
+  // home 
+    Route::get('/', 'Frontend\FrontendController@home')
+      ->name('frontend.home');
+    Route::post('/permintaan-list-produk', 'Frontend\FrontendController@permintaanListProduk')
+      ->name('frontend.permintaan.list.produk');
+  // home 
 
-  Route::get('/tentang-kami', 'Frontend\FrontendController@tentangKami')
-    ->name('frontend.tentang-kami');
+  // tentang kami
+    Route::get('/tentang-kami', 'Frontend\FrontendController@tentangKami')
+      ->name('frontend.tentang-kami');
+  // tentang kami
 
-  Route::get('/kontak', 'Frontend\FrontendController@kontak')
-    ->name('frontend.kontak');
-  Route::post('/kontak/simpan', 'Frontend\FrontendController@kontakSimpan')
-    ->name('frontend.kontak.simpan');
+  // standar
+    Route::get('/standar', 'Frontend\FrontendController@standarIndex')
+      ->name('frontend.standar.index');
+    Route::get('/standar/produk', 'Frontend\FrontendController@standarProduk')
+      ->name('frontend.standar.produk');
+    Route::get('/standar/produk/{slug}', 'Frontend\FrontendController@standarProdukView')
+      ->name('frontend.standar.produk.view');
+    Route::get('/standar/servis', 'Frontend\FrontendController@standarServis')
+      ->name('frontend.standar.servis');
+    Route::get('/standar/servis/{slug}', 'Frontend\FrontendController@standarServisView')
+      ->name('frontend.standar.servis.view');
+  // standar
+
+  // kontak
+    Route::get('/kontak', 'Frontend\FrontendController@kontak')
+      ->name('frontend.kontak');
+    Route::post('/kontak/simpan', 'Frontend\FrontendController@kontakSimpan')
+      ->name('frontend.kontak.simpan');
+  // kontak
   
 // END FRONTEND
 

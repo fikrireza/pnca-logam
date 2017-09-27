@@ -11,6 +11,11 @@
 			<div class="wrapper">
 				<div id="logo" class="bar">
 					<img src="{{ asset('amadeo/images-base/logo-pancalogam.png') }}">
+					<div id="burger">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
 				</div>
 				<div id="name" class="bar">
 					<h1>PT. PANCA LOGAM SUKSES MANDIRI</h1>
@@ -28,7 +33,7 @@
 					</a>
 				</div>
 				<div class="bar">
-					<a href="">
+					<a href="{{ route('frontend.standar.index') }}">
 						STANDAR
 					</a>
 				</div>

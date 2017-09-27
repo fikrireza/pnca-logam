@@ -99,7 +99,7 @@
 					Harga yang kompetitif dan berkualitas menjadi dua prioritas utama bisnis kami, bersama dengan inovasi yang berkelanjutan dan didukung dengan staf yang handal.
 				</p>
 				<div id="href">
-					<a href="" class="btn-purple">DETAIL</a>
+					<a href="{{ route('frontend.tentang-kami') }}" class="btn-purple">DETAIL</a>
 				</div>
 			</div>
 			<div class="clearfix"></div>
@@ -117,7 +117,7 @@
 				Produk standar merupakan produk besi baru yang memenuhi standar international. produk ini banyak digunakan dalam proyek proyek besar. seperti pembuatan pabrik, jalan raya, jembatan dan sarana umum lainya. Untuk tau lebih dalam dan melihat jenis besi apa saja yang kami miliki  silahkan klik tombol dibawah ini
 			</p>
 			<div class="text-center">
-				<a href="" class="btn-purple">LIHAT</a>
+				<a href="{{ route('frontend.standar.index') }}" class="btn-purple">LIHAT</a>
 			</div>
 		</div>
 		<div class="img" style="background-image: url('{{ asset('amadeo/images-base/produk-img-2.jpg') }}');"></div>
