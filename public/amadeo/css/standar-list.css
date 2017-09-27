@@ -7,6 +7,14 @@
 		background-size: cover;
 		background-position: center;
 	}
+	/* mobile */
+		@media (max-width: 480px) {
+			#banner{
+				height: 30vh;
+				padding-top: 60px;
+			}
+		}
+	/* mobile */
 /* banner */
 
 /* list standar */
@@ -119,4 +127,56 @@
 	#list-standar #wrapper #list .owl-controls .owl-buttons .owl-prev{
 		transform: rotateY(180deg);
 	}
+	/* mobile */
+		@media (max-width: 480px) {
+			#list-standar img#top.teksture{
+				top: -65px;
+			}
+			#list-standar img#bottom.teksture{
+				bottom: -30px;
+				z-index: -1;
+			}
+			#list-standar #wrapper{
+				width: 90%;
+				margin-top: 20px;
+				padding-top: 0px;
+			}
+			#list-standar #wrapper h1{
+				font-size: 26px;
+			}
+			#list-standar #wrapper h1 b{
+				font-size: 36px;
+			}
+			#list-standar #wrapper #list{
+				margin-top: 15px;
+				margin-bottom: 5px;
+			}
+			#list-standar #wrapper #list .bar{
+				height: 25vh;
+			}
+			#list-standar #wrapper #list .bar #descript{
+				top: 0vh;
+				background-color: rgba(46,49,166,.5);
+			}
+			#list-standar #wrapper #list .bar #descript h2{
+				font-size: 12px;
+				padding: 0 10px;
+				padding-top: 25px;
+			}
+			#list-standar #wrapper #list .bar #descript p{
+				display: none;
+			}
+			#list-standar #wrapper #list .bar #descript .text-center{
+				visibility: visible;
+				opacity: 1;
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+			}
+			#list-standar #wrapper #list .bar #descript .text-center a{
+				padding: 5px 10px;
+				font-size: 10px;
+			}
+		}
+	/* mobile */
 /* list standar */

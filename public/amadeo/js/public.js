@@ -1,4 +1,5 @@
 var win = $(window);
+
 // for dekstop
 if(win.width() > 960){
 var initNavbar = 250;
@@ -12,3 +13,11 @@ var initNavbar = 250;
     });
 }
 // end for dekstop
+
+// for mobile
+if(win.width() < 512){
+	$('#navigasi #content .wrapper #logo.bar #burger').click(function(){
+		$('#navigasi').toggleClass("aktif");;
+	});
+}
+// for mobile

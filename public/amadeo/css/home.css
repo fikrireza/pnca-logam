@@ -69,6 +69,44 @@
 			width: 100%;
 		}
 	/* psp */
+	/* mobile */
+		@media (max-width: 480px) {
+			#header{
+				height: 100vh;
+			}
+			#header #sliders .item{
+				height: 100vh;
+			}
+			#header #sliders .item .title{
+				top: 25vh;
+				left: 5vw;
+			}
+			#header #sliders .item .title h1{
+				font-size: 20px;
+			}
+			#header #psp #content{
+				bottom: 5vh;
+				left: 5vw;
+				width: 60vw;
+				padding: 10px;
+			}
+			#header #psp #content p{
+				font-size: 12px;
+				margin-bottom: 10px;
+			}
+			#header #psp #content form.form-style input, 
+			#header #psp #content form.form-style textarea{
+				margin-bottom: 10px;
+				padding: 4px;
+				font-size: 12px;
+			}
+			#header #psp button{
+				margin: 0 auto;
+				padding: 5px 20px;
+				font-size: 12px;
+			}
+		}
+	/* mobile */
 /* header */
 
 /* tentang kami */
@@ -112,6 +150,22 @@
 		text-align: center;
 		margin: 60px auto;
 	}
+	/* mobile */
+		@media (max-width: 480px) {
+			#tentang-kami #set-up .wrapper{
+				width: 100%;
+			}
+			#tentang-kami #set-up .wrapper:nth-child(odd){
+				display: none;
+			}
+			#tentang-kami #set-up .wrapper #title{
+				top: -5px;
+			}
+			#tentang-kami #set-up .wrapper #title h2{
+				font-size: 32px;
+			}
+		}
+	/* mobile */
 /* tentang kami */
 
 /* produk */
@@ -154,6 +208,20 @@
 		font-family: 'kanit';
         font-weight: lighter;
 	}
+	/* mobile */
+		@media (max-width: 480px) {
+			#produk .img{
+				width: 0;
+			}
+			#produk #description{
+				width: 100%;
+			}
+			#produk #description #title,
+			#produk #description .text-center{
+				margin: 5vh auto;
+			}
+		}
+	/* mobile */
 /* produk */
 
 /* servis */
@@ -262,6 +330,48 @@
 			right: -50px;
 		}
 	/* slider */
+	/* mobile */
+		@media (max-width: 480px) {
+			#servis{
+				height: auto;
+				padding-bottom: 20px;
+			}
+			#servis #wrapper #title{
+				padding-top: 20px;
+			}
+			#servis #wrapper #title h2{
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+			}
+			#servis #wrapper #title p{
+				width: 100%;
+			}
+			#servis #wrapper #sliders .owl-controls{
+				top: -25vh;
+			}
+			#servis #wrapper #sliders .owl-controls .owl-buttons .owl-prev{
+				left: -40px;
+			}
+			#servis #wrapper #sliders .owl-controls .owl-buttons .owl-next{
+				right: -40px;
+			}
+			#servis #wrapper #sliders .item .to-center{
+				width: 185px;
+			}
+			#servis #wrapper #sliders .item .border{
+				width: 185px;
+				height: 185px;
+			}
+			#servis #wrapper #sliders .item .border .img{
+				width: 170px;
+				height: 170px;
+			}
+			#servis #wrapper #sliders .item h4{
+				margin-top: 5px;
+				margin-bottom: 0px;
+			}
+		}
+	/* mobile */
 /* servis */
 
 /* klien */
@@ -291,4 +401,11 @@
 	#klien #wrapper #sliders .item img.img{
 		height: 40px;
 	}
+	/* mobile */
+		@media (max-width: 480px) {
+			#klien #wrapper{
+				width: 100%;
+			}
+		}
+	/* mobile */
 /* klien */

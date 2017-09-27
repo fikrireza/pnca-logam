@@ -39,6 +39,34 @@
 		top: 15vh;
 		right: -15px;
 	}
+	/* mobile */
+		@media (max-width: 480px) {
+			#header{
+				height: auto;
+				padding-bottom: 5vh;
+				overflow-x: hidden;
+			}
+			#header #wrapper a{
+				pointer-events: none;
+			}
+			#header #wrapper img{
+				width: 320px;
+				right: -100px;
+			}
+			#header #wrapper #content{
+				position: relative;
+				z-index: 1;
+				padding-top: 25vh;
+				width: 75%;
+			}
+			#header #wrapper #content h1{
+				font-size: 28px;
+			}
+			#header #wrapper #content p{
+				font-size: 14px;
+			}
+		}
+	/* mobile */
 /* header */
 
 /* body */
@@ -149,6 +177,42 @@
 			display: inline-grid;
 			margin: 0 2.5px;
 		    filter: grayscale(100%) brightness(-100%) invert(100%);
+		    -moz-filter: grayscale(100%) brightness(-100%) invert(100%);
 		}
 	/* kontak informasi */
+	/* mobile */
+		@media (max-width: 480px) {
+			#body{
+				height: auto;
+			}
+			#body img.teksture{
+				display: none;
+			}
+			#body #to-up{
+				position: relative;
+				top: 0vh;
+			}
+			#body #to-up #wrapper{
+				width: 100%;
+			}
+			#body #to-up #wrapper #kirim-pesan{
+				width: 100%;
+			}
+			#body #to-up #wrapper #kirim-pesan #content{
+				padding: 10px;
+			}
+			#body #to-up #wrapper #kirim-pesan form .float.margin{
+				margin: 0;
+			}
+			#body #to-up #wrapper #kirim-pesan form .float{
+				width: 100%;
+			}
+			#body #to-up #wrapper #kirim-pesan form button#submit{
+				margin-top: 10px;
+			}
+			#body #to-up #wrapper #kontak-informasi{
+				width: 100%;
+			}
+		}
+	/* mobile */
 /* body */

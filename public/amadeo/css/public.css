@@ -40,6 +40,13 @@
 	.text-center{
 		text-align: center;
 	}
+	/* mobile */
+		@media (max-width: 480px) {
+			body{
+				overflow-x: hidden;
+			}
+		}
+	/* mobile */
 /* public */
 
 /* navigasi */
@@ -186,30 +193,36 @@
 					border-radius: 5px;
 				}
 				#navigasi #content .wrapper #name.bar h1{
-					font-size: 16px;
-					visibility: hidden;
-					opacity: 0;
+					font-size: 10px;
 					position: absolute;
+					left: 12%;
 				}
 			/* icon and burger */
 			/* list nav */
-			#navigasi #content .wrapper:nth-child(even){
-				float: none;
-				display: block;
-				/*visibility: hidden;
-				opacity: 0;
-				height: 0;*/
-			}
-			#navigasi #content .wrapper:nth-child(even) .bar{
-				display: block;
-				height: auto;
-				padding-top: 5px;
-				padding-bottom: 5px;
-			}
+				#navigasi #content .wrapper:nth-child(even){
+					float: none;
+					display: block;
+					visibility: hidden;
+					opacity: 0;
+					height: 0;
+					transition: all 1.51s;
+				}
+				#navigasi #content .wrapper:nth-child(even) .bar{
+					display: block;
+					height: auto;
+					padding-top: 5px;
+					padding-bottom: 5px;
+				}
 			/* list nav */
+			/* aktif */
+				#navigasi.aktif #content .wrapper:nth-child(even){
+					visibility: visible;
+					opacity: 1;
+					height: 180px;
+				}
+			/* aktif */
 		}
 	/* mobile */
-
 /* navigasi */
 
 /* copy right */
@@ -235,4 +248,20 @@
 		margin-left: 20px;
 		bottom: -10px;
 	}
+
+	/* mobile */
+		@media (max-width: 480px) {
+			#copy-right label{
+				display: block;
+			}
+			#copy-right label:nth-child(odd){
+				border-right: none;
+			}
+			#copy-right label img{
+				position: relative;
+				margin: 0 auto;
+				display: block;
+			}
+		}
+	/* mobile */
 /* copy right */

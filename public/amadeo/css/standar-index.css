@@ -7,6 +7,14 @@
 		background-size: cover;
 		background-position: center;
 	}
+	/* mobile */
+		@media (max-width: 480px) {
+			#banner{
+				height: 30vh;
+				padding-top: 60px;
+			}
+		}
+	/* mobile */
 /* banner */
 
 /* produk */
@@ -24,7 +32,6 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
-		position: relative;
 		width: 65%;
 	}
 	#produk #img.bar #titile{
@@ -66,6 +73,42 @@
 		bottom: 20px;
 		width: 100%;
 	}
+	/* mobile */
+		@media (max-width: 480px) {
+			#produk{
+				padding-top: 20px;
+			}
+			#produk .bar{
+				height: auto;
+			}
+			#produk #img.bar{
+				width: 100%;
+			}
+			#produk #img.bar #titile{
+				position: relative;
+				bottom: 0vh;
+			}
+			#produk #img.bar #titile h1{
+				font-size: 24px;
+			}
+			#produk #content.bar{
+				width: 100%;
+			}
+			#produk #content.bar #descrip{
+				position: relative;
+				width: 100%;
+				padding: 0;
+				left: 0;
+			}
+			#produk #content.bar #descrip p{
+				padding: 20px;
+			}
+			#produk #content.bar .text-center{
+				position: relative;
+				bottom: 0;
+			}
+		}
+	/* mobile */
 /* produk */
 
 /* servis */
@@ -93,6 +136,7 @@
 	#servis #content.bar img#bottom.teksture{
 		bottom: 0;
 		right: 0;
+	    z-index: -1;
 	}
 	#servis #content.bar #wrapper{
 		padding-left: 125px;
@@ -123,5 +167,21 @@
 		height: 90%;
 		width: 100%;
 	}
+	/* mobile */
+		@media (max-width: 480px) {
+			#servis .bar{
+				height: auto;
+			}
+			#servis #content.bar{
+				width: 100%;
+			}
+			#servis #content.bar #wrapper{
+				padding: 25px;
+			}
+			#servis #img.bar{
+				display: none;
+			}
+		}
+	/* mobile */
 /* servis */
 

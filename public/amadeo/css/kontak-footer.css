@@ -1,49 +1,51 @@
 /* kontak */
-	#kontak{
-		position: relative;
-		margin: 0;
-		padding: 0;
-		padding-top: 40px;
-		padding-bottom: 20px;
-		background-color: rgb(242,242,242);
-	}
-	#kontak #wrapper{
-		position: relative;
-		width: 85%;
-		margin: 0 auto;
-		padding: 0;
-	}
-	#kontak #wrapper #title{
-		padding: 10px 15px;
-		position: relative;
-	}
-	#kontak #wrapper #title #border-top{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 5vw;
-		border-top: .5px solid rgb(46,49,146);
-	}
-	#kontak #wrapper #title #border-left{
-		border-left: .5px solid rgb(46,49,146);
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 10vh;
-	}
-	#kontak #wrapper #title h1{
-		margin: 0;
-		font-family: 'roboto medium';
-	}
-	#kontak #wrapper #title h1 b{
-		font-family: 'roboto';
-        font-weight: bold;
-	}
-	#kontak #wrapper .bar{
-		float: left;
-		width: 30%;
-		padding: 1%;
-	}
+	/* normal */
+		#kontak{
+			position: relative;
+			margin: 0;
+			padding: 0;
+			padding-top: 40px;
+			padding-bottom: 20px;
+			background-color: rgb(242,242,242);
+		}
+		#kontak #wrapper{
+			position: relative;
+			width: 85%;
+			margin: 0 auto;
+			padding: 0;
+		}
+		#kontak #wrapper #title{
+			padding: 10px 15px;
+			position: relative;
+		}
+		#kontak #wrapper #title #border-top{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 5vw;
+			border-top: .5px solid rgb(46,49,146);
+		}
+		#kontak #wrapper #title #border-left{
+			border-left: .5px solid rgb(46,49,146);
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 10vh;
+		}
+		#kontak #wrapper #title h1{
+			margin: 0;
+			font-family: 'roboto medium';
+		}
+		#kontak #wrapper #title h1 b{
+			font-family: 'roboto';
+	        font-weight: bold;
+		}
+		#kontak #wrapper .bar{
+			float: left;
+			width: 30%;
+			padding: 1%;
+		}
+	/* normal */
 	/* info */
 		#kontak #wrapper .bar .rows{
 			display: table;
@@ -106,4 +108,26 @@
 			margin-bottom: 20px;
 		}
 	/* maps */
+
+	/* mobile */
+		@media (max-width: 480px) {
+			#kontak #wrapper .bar{
+				width: 100%;
+			}
+			#kontak #wrapper .bar .rows .cell:nth-child(odd){
+				width: 20%;
+			}
+			#kontak #wrapper .bar .rows .cell:nth-child(even){
+				width: 80%;
+			}
+			#kontak #wrapper .bar .submit-wrapper{
+				height: auto;
+				margin-bottom: 20px;
+			}
+			#kontak #wrapper .bar .submit-wrapper .g-recaptcha{
+				position: relative;
+			    left: 0%;
+			}
+		}
+	/* mobile */
 /* kontak */
