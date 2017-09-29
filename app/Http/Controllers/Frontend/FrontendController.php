@@ -152,6 +152,147 @@ class FrontendController extends Controller
     // servis    
   // standar
 
+  // scrap
+    function scrapIndex() {
+      return view('frontend.scrap-page.index');
+    }
+    // servis
+      function scrapServis() {
+        $titlePage = "Servis";
+        $titlePageBody = "<h1>Servis</h1><h1><b>SCRAP</b></h1>";
+        $routeView = "frontend.scrap.servis.view";
+        $items = [
+          "plat kapal",
+          "wiremesh"
+        ];
+        $manyItems = count($items)-1;
+        return view('frontend.scrap-page.index-list', compact(
+            'items',
+            'manyItems',
+            'titlePage',
+            'titlePageBody',
+            'routeView'
+        ));
+      }
+      function scrapServisView($slug) {
+        $titlePage = "Servis";
+        $routeList = "frontend.scrap.servis";
+        $name = str_replace('-', ' ', $slug);
+        
+        $title = explode('-',$slug);
+        $echoTitle = "";
+
+        foreach ($title as $key) {
+          $echoTitle = $echoTitle."<h1>".$key."</h1>";
+        }
+
+        return view('frontend.scrap-page.index-list-view', compact(
+            'titlePage',
+            'routeList',
+            'name',
+            'echoTitle'
+        ));
+      }
+    // servis
+    // produk
+      function scrapProduk() {
+        $titlePage = "Produk";
+        $titlePageBody = "<h1>PRODUK</h1><h1><b>SCRAP</b></h1>";
+        $routeView = "frontend.scrap.produk.view";
+        $items = [
+          "plat kapal",
+          "wiremesh"
+        ];
+        $manyItems = count($items)-1;
+        $kategoriBesiName = [
+            "Kategori Super",
+            "Kategori A",
+            "Kategori B",
+            "Kategori C",
+            "Kategori D",
+            "Kategori E"
+        ];
+        $kategoriBesiDesc = [
+            "Berupa: sisa potongan dari besi baru, bekas produksi pabrik, besi galangan kapal, fabrikasi konstruksi dengan asumsi tidak ada cat, tidak berkarat signifikan dengan tebal 8 mm ke atas.",
+            "Berupa: besi bekas palat, besi beton 12 mm ke atas, besi eks alat berat, velg-velg mobil, besi bekas kontruksi (potongan wf, h beam, siku, unp) dengan tebal 4 mm up.",
+            "Berupa: tinpalte, potongan container, besi beton 8-10 mm, bekas potongan mobil truk, besi kontruksi (potongan siku, u, cnp), bekas bengkel, dengan tebal 2-3 mm.",
+            "Berupa : besi cor, rantai motor, plat tipis, besi beton 8 mm kebawah, velg motor, plat-plat tipis besi kontruksi (potongan, siku, cnp), dengan tebal 1-2 mm.",
+            "Berupa: besi bekas gram mesin bubut rangka sepeda, drum, kursi, ranjang tidur, pipa-pipa tipis, plat cpu komputer, galvanis berkarat, dan lainnya.",
+            "Berupa: besi bekas kaleng, atap seng, yang berkarat, dan lainnya."
+        ];
+        $manyKategori = count($kategoriBesiName)-1;
+
+        return view('frontend.scrap-page.index-list', compact(
+            'items',
+            'manyItems',
+            'titlePage',
+            'titlePageBody',
+            'routeView',
+            'kategoriBesiName',
+            'kategoriBesiDesc',
+            'manyKategori'
+        ));
+      }
+      function scrapProdukView($slug) {
+        $titlePage = "Produk";
+        $routeList = "frontend.scrap.produk";
+        $name = str_replace('-', ' ', $slug);
+        
+        $title = explode('-',$slug);
+        $echoTitle = "";
+
+        foreach ($title as $key) {
+          $echoTitle = $echoTitle."<h1>".$key."</h1>";
+        }
+
+        return view('frontend.scrap-page.index-list-view', compact(
+            'titlePage',
+            'routeList',
+            'name',
+            'echoTitle'
+        ));
+      }
+    // produk
+    // project
+      function scrapProjek() {
+        $titlePage = "Projek";
+        $titlePageBody = "<h1>PROJEK</h1><h1><b>KAMI</b></h1>";
+        $routeView = "frontend.scrap.projek.view";
+        $items = [
+          "plat kapal",
+          "wiremesh"
+        ];
+        $manyItems = count($items)-1;
+        return view('frontend.scrap-page.index-list', compact(
+            'items',
+            'manyItems',
+            'titlePage',
+            'titlePageBody',
+            'routeView'
+        ));
+      }
+      function scrapProjekView($slug) {
+        $titlePage = "Projek";
+        $routeList = "frontend.scrap.projek";
+        $name = str_replace('-', ' ', $slug);
+        
+        $title = explode('-',$slug);
+        $echoTitle = "";
+
+        foreach ($title as $key) {
+          $echoTitle = $echoTitle."<h1>".$key."</h1>";
+        }
+
+        return view('frontend.scrap-page.index-list-view', compact(
+            'titlePage',
+            'routeList',
+            'name',
+            'echoTitle'
+        ));
+      }
+    // project
+  // scrap
+
   // kontak
   	function kontak() {
   		return view('frontend.kontak-page.index');

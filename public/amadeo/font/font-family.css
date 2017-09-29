@@ -1,6 +1,10 @@
 /* kanit */
     @font-face {
         font-family: 'kanit';
+        src: url('../font/Kanit/Kanit-Medium.ttf');
+    }
+    @font-face {
+        font-family: 'kanit';
         font-weight: lighter;
         src: url('../font/Kanit/Kanit-Light.ttf');
     }

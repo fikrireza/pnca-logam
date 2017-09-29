@@ -1,0 +1,281 @@
+/* public */
+	.btn-purple{
+		background-color: rgb(237,28,36);
+	}
+/* public */
+
+/* banner */
+	#banner{
+		position: relative;
+		width: 100%;
+		height: 70vh;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	/* mobile */
+		@media (max-width: 480px) {
+			#banner{
+				height: 30vh;
+				padding-top: 60px;
+			}
+		}
+	/* mobile */
+/* banner */
+
+/* servis */
+	#servis{
+		position: relative;
+		width: 100%;
+	}
+	#servis .bar{
+		position: relative;
+		float: left;
+		height: 75vh;
+	}
+	#servis #content.bar{
+		width: 43%;
+	}
+	#servis #content.bar img.teksture{
+		position: absolute;
+		width: 200px;
+	}
+	#servis #content.bar img#top.teksture{
+		top: -40px;
+	    left: 0;
+	    z-index: -1;
+	}
+	#servis #content.bar img#bottom.teksture{
+		bottom: 0;
+		right: 0;
+	    z-index: -1;
+	}
+	#servis #content.bar #wrapper{
+		padding-left: 125px;
+		padding-right: 60px;
+		padding-top: 50px;
+	}
+	#servis #content.bar #wrapper h1{
+		margin: 0;
+		margin-bottom: 20px;
+        font-family: 'roboto black';
+		font-size: 38px;
+	}
+	#servis #content.bar #wrapper p{
+		margin: 0;
+		margin-bottom: 40px;
+		line-height: 1.41;
+		font-family: 'kanit';
+        font-weight: lighter;
+	}
+	#servis #img.bar{
+		width: 49.5%;
+		padding-top: 40px;
+	}
+	#servis #img.bar #img{
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 90%;
+		width: 100%;
+	}
+	/* mobile */
+		@media (max-width: 480px) {
+			#servis .bar{
+				height: auto;
+			}
+			#servis #content.bar{
+				width: 100%;
+			}
+			#servis #content.bar #wrapper{
+				padding: 25px;
+			}
+			#servis #img.bar{
+				display: none;
+			}
+		}
+	/* mobile */
+/* servis */
+
+/* produk */
+	#produk{
+		position: relative;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		width: 100%;
+	}
+	#produk .bar{
+		position: relative;
+		float: left;
+		height: 65vh;
+	}
+	#produk #img.bar{
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		width: 65%;
+	}
+	#produk #img.bar #titile{
+		position: absolute;
+		left: 0;
+		bottom: 10vh;
+		background-color: rgba(0,0,0,.67);
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 80px;
+		width: 65%;
+	}
+	#produk #img.bar #titile h1{
+		margin: 0;
+		color: white;
+		font-family: 'roboto black';
+		font-size: 38px;
+	}
+	#produk #content.bar{
+		width: 27.5%;	
+	}
+	#produk #content.bar #descrip{
+		position: absolute;
+		top: 0;
+		left: -60px;
+		padding: 20px;
+		width: 27.5vw;
+		background-color: rgb(237,28,36);
+	}
+	#produk #content.bar #descrip p{
+        margin: 0;
+		color: white;
+		line-height: 1.41;
+		font-family: 'kanit';
+        font-weight: lighter;
+	}
+	#produk #content.bar .text-center{
+		position: absolute;
+		bottom: 20px;
+		width: 100%;
+	}
+	/* mobile */
+		@media (max-width: 480px) {
+			#produk{
+				padding-top: 20px;
+			}
+			#produk .bar{
+				height: auto;
+			}
+			#produk #img.bar{
+				width: 100%;
+			}
+			#produk #img.bar #titile{
+				position: relative;
+				bottom: 0vh;
+			}
+			#produk #img.bar #titile h1{
+				font-size: 24px;
+			}
+			#produk #content.bar{
+				width: 100%;
+			}
+			#produk #content.bar #descrip{
+				position: relative;
+				width: 100%;
+				padding: 0;
+				left: 0;
+			}
+			#produk #content.bar #descrip p{
+				padding: 20px;
+			}
+			#produk #content.bar .text-center{
+				position: relative;
+				bottom: 0;
+			}
+		}
+	/* mobile */
+/* produk */
+
+/* projek */
+	#projek{
+		position: relative;
+		margin: 0;
+		padding: 0;
+		padding-top: 40px;
+		padding-bottom: 20px;
+		background-color: rgb(242,242,242);
+	}
+	#projek #wrapper{
+		position: relative;
+		width: 85%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	#projek #wrapper #title{
+		padding: 10px 15px;
+		position: relative;
+	}
+	#projek #wrapper #title #border-top{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 5vw;
+		border-top: .5px solid rgb(237,28,36);
+	}
+	#projek #wrapper #title #border-left{
+		border-left: .5px solid rgb(237,28,36);
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 7.5vh;
+		width: .5px;
+	}
+	#projek #wrapper #title h1{
+		margin: 0;
+        font-family: 'roboto black';
+	}
+	#projek #wrapper .bar{
+		position: relative;
+		float: left;
+		width: 33.33%;
+	}
+	#projek #wrapper .bar #content{
+		position: relative;
+		padding: 2.5%;
+	}
+	#projek #wrapper .bar #content #img{
+		width: 100%;
+		height: 45vh;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	#projek #wrapper .bar #content #descrip{
+		width: 100%;
+		background-color: white;
+		text-align: center;
+		padding: 10px 0;
+	}
+	#projek #wrapper .bar a{
+		text-decoration: none;
+		color: black;
+	}
+	#projek #wrapper .bar a #content #descrip h3{
+		width: 90%;
+		margin: 15px auto;
+		font-family: 'roboto';
+        font-weight: bold;
+	}
+	#projek #wrapper .bar a #content #descrip p{
+		width: 90%;
+		margin: 10px auto;
+		font-family: 'kanit';
+        font-weight: lighter;
+	}
+	/* mobile */
+		@media (max-width: 480px) {
+			#projek #wrapper .bar{
+				width: 100%;
+			}
+			#projek #wrapper .bar #content{
+				/*padding: 0;*/
+			}
+		}
+	/* mobile */
+/* projek */

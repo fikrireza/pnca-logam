@@ -38,6 +38,29 @@
       ->name('frontend.standar.servis.view');
   // standar
 
+  // scrap
+    Route::get('/scrap', 'Frontend\FrontendController@scrapIndex')
+      ->name('frontend.scrap.index');
+    // servis
+      Route::get('/scrap/servis', 'Frontend\FrontendController@scrapServis')
+        ->name('frontend.scrap.servis');
+      Route::get('/scrap/servis/{slug}', 'Frontend\FrontendController@scrapServisView')
+        ->name('frontend.scrap.servis.view');
+    // servis
+    // produk
+      Route::get('/scrap/produk', 'Frontend\FrontendController@scrapProduk')
+        ->name('frontend.scrap.produk');
+      Route::get('/scrap/produk/{slug}', 'Frontend\FrontendController@scrapProdukView')
+        ->name('frontend.scrap.produk.view');
+    // produk
+    // projek
+      Route::get('/scrap/projek', 'Frontend\FrontendController@scrapProjek')
+        ->name('frontend.scrap.projek');
+      Route::get('/scrap/projek/{slug}', 'Frontend\FrontendController@scrapProjekView')
+        ->name('frontend.scrap.projek.view');
+    // projek
+  // scrap
+
   // kontak
     Route::get('/kontak', 'Frontend\FrontendController@kontak')
       ->name('frontend.kontak');

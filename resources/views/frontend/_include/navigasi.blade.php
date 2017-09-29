@@ -38,7 +38,7 @@
 					</a>
 				</div>
 				<div class="bar">
-					<a href="">
+					<a href="{{ route('frontend.scrap.index') }}">
 						SCRAP
 					</a>
 				</div>

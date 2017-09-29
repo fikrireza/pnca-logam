@@ -22,6 +22,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
+			height: .5px;
 			width: 5vw;
 			border-top: .5px solid rgb(46,49,146);
 		}
@@ -31,6 +32,7 @@
 			top: 0;
 			left: 0;
 			height: 10vh;
+			width: .5px;
 		}
 		#kontak #wrapper #title h1{
 			margin: 0;

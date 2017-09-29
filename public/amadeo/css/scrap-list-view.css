@@ -1,0 +1,128 @@
+/* public */
+	.btn-purple{
+		background-color: rgb(194,23,29);
+	}
+/* public */
+/* banner */
+	#banner{
+		position: relative;
+		width: 100%;
+		height: 70vh;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	/* mobile */
+		@media (max-width: 480px) {
+			#banner{
+				height: 30vh;
+				padding-top: 60px;
+			}
+		}
+	/* mobile */
+/* banner */
+
+/* item content */
+	#item-content{
+		position: relative;
+	}
+	#item-content img.teksture{
+		position: absolute;
+	}
+	#item-content img#left.teksture{
+	    top: -5vh;
+	    left: 0;
+	    width: 170px;
+	    z-index: -1;
+	}
+	#item-content img#right.teksture{
+		top: 0;
+		right: 0;
+		width: 300px;
+	}
+	#item-content img#bottom.teksture{
+	    bottom: 10vh;
+	    right: 0;
+	    width: 365px;
+	}
+	#item-content #wrapper{
+		position: relative;
+		width: 85%;
+		margin: 0 auto;
+		padding-top: 25vh;
+		padding-bottom: 25vh;
+	}
+	#item-content #wrapper .bar{
+		position: relative;
+		float: left;
+		width: 50%;
+		height: 75vh;
+	}
+	#item-content #wrapper #img.bar{
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	#item-content #wrapper #content.bar{
+	}
+	#item-content #wrapper #content.bar .content{
+		padding: 0 40px;
+	}
+	#item-content #wrapper #content.bar .content h1{
+		margin: 0;
+		text-transform: uppercase;
+	}
+	#item-content #wrapper #content.bar .content p{
+		margin-top: 20px;
+		margin-bottom: 40px;
+		line-height: 1.61;
+		font-family: 'kanit';
+        font-weight: lighter;
+	}
+	#item-content #wrapper #content.bar .content a{
+		text-decoration: none;
+		text-transform: uppercase;
+		height: 60px;
+		display: table-cell;
+		vertical-align: middle;
+		padding-right: 20px;
+		color: rgb(237,28,36);
+	}
+	#item-content #wrapper #content.bar .content a img{
+		width: 40px;
+		transform: rotate(180deg);
+	}
+	/* mobile */
+		@media (max-width: 480px) {
+			#item-content img#left.teksture{
+				top: -10vh;
+				width: 120px;
+			}
+			#item-content img#right.teksture{
+				top: 15vh;
+			}
+			#item-content img#bottom.teksture{
+			    bottom: 0;
+			    width: 265px;
+			}
+			#item-content #wrapper{
+				height: auto;
+				padding-top: 5vh;
+				padding-bottom: 5vh;
+			}
+			#item-content #wrapper .bar{
+				display: block;
+				width: 100%;
+				height: auto;
+				min-height: 25vh;
+			}
+			#item-content #wrapper #content.bar .content{
+				padding: 0;
+			}
+			#item-content #wrapper #content.bar .content h1{
+				display: inline-block;
+				margin: 0 5px;
+			}
+		}
+	/* mobile */
+/* item content */
