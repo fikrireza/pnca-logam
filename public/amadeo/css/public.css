@@ -56,7 +56,7 @@
 			top: 0;
 			width: 100%;
 			z-index: 20;
-			transition: all 1.15s;
+			/*transition: all 1.15s;*/
 		}
 		#navigasi #contact,
 		#navigasi #content{
@@ -65,7 +65,7 @@
 			margin: 0 auto;
 			padding-top: 5px;
 			padding-bottom: 5px;
-			transition: all 1.15s;
+			/*transition: all 1.15s;*/
 		}
 		#navigasi #contact{
 			text-align: right;
@@ -96,6 +96,7 @@
 			display: table;
 		}
 		#navigasi #content .wrapper .bar{
+			position: relative;
 			display: table-cell;
 			vertical-align: middle;
 			height: 60px;
@@ -120,6 +121,36 @@
 			margin-right: 5px;
 			font-family: 'roboto regular';
 		}
+		#navigasi #content .wrapper .bar.dropdown #dropdown-content{
+			position: absolute;
+			top: 105%;
+			left: -5px;
+			background-color: white;
+			/*width: 100%;*/
+			/*box-shadow: 0px 1px 5px rgb(88,88,88);*/
+			visibility: hidden;
+			opacity: 0;
+			transition: all .51s;
+		}
+		#navigasi #content .wrapper .bar.dropdown:hover #dropdown-content{
+			visibility: visible;
+			opacity: 1;
+		}
+		#navigasi #content .wrapper .bar.dropdown #dropdown-content #padding{
+			position: relative;
+			padding: 10px;
+		    padding-left: 10px;
+		    padding-right: 90px;
+		}
+		#navigasi #content .wrapper .bar.dropdown #dropdown-content #padding .list{
+			margin-bottom: 5px;
+		}
+		#navigasi #content .wrapper .bar.dropdown #dropdown-content #padding .list:last-child{
+			margin: 0;
+		}
+		#navigasi #content .wrapper .bar.dropdown #dropdown-content #padding .list a{
+			text-transform: none;
+		}
 	/* normal */
 	/* in scroll*/
 		#navigasi.in-scroll{
@@ -139,8 +170,23 @@
 		#navigasi.in-scroll #content{
 			width: 100%;
 		}
+		#navigasi.in-scroll #content .wrapper:nth-child(odd){
+			padding-left: 60px;
+		}
 		#navigasi.in-scroll #content .wrapper:nth-child(even){
-			padding-right: 10px;
+			padding-right: 70px;
+		}
+		#navigasi.in-scroll #content .wrapper #logo.bar img{
+			height: 30px;
+		}
+		#navigasi.in-scroll #content .wrapper #name.bar h1{
+			font-size: 22px;
+		}
+		#navigasi.in-scroll #content .wrapper .bar{
+			height: 40px;
+		}
+		#navigasi.in-scroll #content .wrapper .bar a{
+			font-size: 14px;
 		}
 	/* in scroll*/
 
@@ -195,7 +241,8 @@
 				#navigasi #content .wrapper #name.bar h1{
 					font-size: 10px;
 					position: absolute;
-					left: 12%;
+					left: -200px;
+					
 				}
 			/* icon and burger */
 			/* list nav */
@@ -218,9 +265,29 @@
 				#navigasi.aktif #content .wrapper:nth-child(even){
 					visibility: visible;
 					opacity: 1;
-					height: 180px;
+					height: 300px;
+				    padding-left: 35px;
 				}
 			/* aktif */
+			/* dropdown */
+				#navigasi #content .wrapper .bar.dropdown #dropdown-content{
+					position: relative;
+					top: 0;
+					left: 0;
+					background-color: rgba(0,0,0,0);
+					visibility: visible;
+					opacity: 1;
+					transition: all 0s;
+				}
+				#navigasi #content .wrapper .bar.dropdown #dropdown-content #padding{
+					padding-top: 5px;
+					padding-bottom: 0px;
+				    padding-left: 20px;
+				}
+				#navigasi #content .wrapper .bar.dropdown #dropdown-content #padding .list{
+					margin-bottom: 5px;
+				}
+			/* dropdown */
 		}
 	/* mobile */
 /* navigasi */

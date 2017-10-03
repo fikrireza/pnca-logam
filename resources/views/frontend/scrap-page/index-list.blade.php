@@ -23,6 +23,7 @@
 				width: 90%;
 				height: 75vh;
 				margin: 0 auto;
+			    padding-bottom: 20px;
 				left: 5%;
 				right: 5%;
 				background-position: center;

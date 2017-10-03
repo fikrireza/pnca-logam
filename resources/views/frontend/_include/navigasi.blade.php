@@ -24,7 +24,7 @@
 			<div class="wrapper">
 				<div class="bar">
 					<a href="{{ route('frontend.home') }}">
-						BRANDA
+						BERANDA
 					</a>
 				</div>
 				<div class="bar">
@@ -32,15 +32,48 @@
 						TENTANG KAMI
 					</a>
 				</div>
-				<div class="bar">
+				<div class="bar dropdown">
 					<a href="{{ route('frontend.standar.index') }}">
 						STANDAR
 					</a>
+					<div id="dropdown-content">
+						<div id="padding">
+							<div class="list">
+								<a href="{{ route('frontend.standar.produk') }}">
+									Produk
+								</a>	
+							</div>
+							<div class="list">
+								<a href="{{ route('frontend.standar.servis') }}">
+									Servis
+								</a>	
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="bar">
+				<div class="bar dropdown">
 					<a href="{{ route('frontend.scrap.index') }}">
 						SCRAP
 					</a>
+					<div id="dropdown-content">
+						<div id="padding">
+							<div class="list">
+								<a href="{{ route('frontend.scrap.servis') }}">
+									Servis
+								</a>	
+							</div>
+							<div class="list">
+								<a href="{{ route('frontend.scrap.produk') }}">
+									Produk
+								</a>	
+							</div>
+							<div class="list">
+								<a href="{{ route('frontend.scrap.projek') }}">
+									Projek
+								</a>	
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="bar">
 					<a href="{{ route('frontend.kontak') }}">

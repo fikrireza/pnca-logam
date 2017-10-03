@@ -116,7 +116,7 @@
 			color: rgb(46,49,146);
 		}
 		#body #to-up #wrapper #kirim-pesan #content{
-			padding: 20px;
+			padding: 20px 20px 40px;
 		}
 		#body #to-up #wrapper #kirim-pesan form .float{
 			float: left;
