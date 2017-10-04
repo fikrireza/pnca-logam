@@ -136,9 +136,11 @@
 				<div class="item">
 					<div class="wrapper">
 						<div class="to-center">
-							<div class="border">
-								<div class="img" style="background-image: url('{{ asset('amadeo/images-base/transport.jpg') }}');"></div>
-							</div>
+							<a href="{{ route('frontend.standar.servis.view', ['slug'=>'jasa-transportasi']) }}">
+								<div class="border">
+									<div class="img" style="background-image: url('{{ asset('amadeo/images-base/transport.jpg') }}');"></div>
+								</div>
+							</a>
 						</div>
 						<h4>Layanan Antar</h4>
 						<p>kami menyediakan pelayanan armada</p>

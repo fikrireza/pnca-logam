@@ -69,7 +69,7 @@
 							</div>
 							<div class="list">
 								<a href="{{ route('frontend.scrap.projek') }}">
-									Projek
+									Proyek
 								</a>	
 							</div>
 						</div>

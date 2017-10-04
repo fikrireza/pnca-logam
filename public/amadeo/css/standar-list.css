@@ -43,11 +43,11 @@
 	#list-standar #wrapper h1{
 		margin: 0;
 		text-transform: uppercase;
-		font-family: 'roboto medium';
+		font-family: 'optima';
 		font-size: 38px;
 	}
 	#list-standar #wrapper h1 b{
-		font-family: 'roboto black';
+		font-family: 'optima black';
 		font-size: 42px;
 	}
 	#list-standar #wrapper #list{
@@ -77,7 +77,7 @@
 		color: white;
 		text-transform: uppercase;
 		font-size: 26px;
-		font-family: 'roboto black';
+		font-family: 'optima black';
 	}
 	#list-standar #wrapper #list .bar #descript p{
 		width: 75%;
@@ -116,16 +116,9 @@
 			visibility: visible;
 			opacity: 1;
 		}
-
 	/* hover efek */
-	#list-standar #wrapper #list .owl-controls .owl-buttons div{
-		background-color: rgba(0,0,0,0);
-	}
-	#list-standar #wrapper #list .owl-controls .owl-buttons div img{
-		width: 20px;
-	}
-	#list-standar #wrapper #list .owl-controls .owl-buttons .owl-prev{
-		transform: rotateY(180deg);
+	#list-standar #wrapper #list #wrapper-load{
+		margin-top: 40px;
 	}
 	/* mobile */
 		@media (max-width: 480px) {

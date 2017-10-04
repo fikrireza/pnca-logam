@@ -1,3 +1,18 @@
+/* optima */
+    @font-face {
+        font-family: 'optima';
+        src: url('../font/Optima/OptimaLTStd.otf');
+    }
+    @font-face {
+        font-family: 'optima';
+        font-weight: bold;
+        src: url('../font/Optima/OptimaLTStd-Bold.otf');
+    }
+    @font-face {
+        font-family: 'optima black';
+        src: url('../font/Optima/OptimaLTStd-Black.otf');
+    }
+/* optima */
 /* kanit */
     @font-face {
         font-family: 'kanit';

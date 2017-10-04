@@ -54,9 +54,9 @@
         ->name('frontend.scrap.produk.view');
     // produk
     // projek
-      Route::get('/scrap/projek', 'Frontend\FrontendController@scrapProjek')
+      Route::get('/scrap/proyek', 'Frontend\FrontendController@scrapProjek')
         ->name('frontend.scrap.projek');
-      Route::get('/scrap/projek/{slug}', 'Frontend\FrontendController@scrapProjekView')
+      Route::get('/scrap/proyek/{slug}', 'Frontend\FrontendController@scrapProjekView')
         ->name('frontend.scrap.projek.view');
     // projek
   // scrap

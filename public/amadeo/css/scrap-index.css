@@ -58,7 +58,7 @@
 	#servis #content.bar #wrapper h1{
 		margin: 0;
 		margin-bottom: 20px;
-        font-family: 'roboto black';
+        font-family: 'optima black';
 		font-size: 38px;
 	}
 	#servis #content.bar #wrapper p{
@@ -128,7 +128,7 @@
 	#produk #img.bar #titile h1{
 		margin: 0;
 		color: white;
-		font-family: 'roboto black';
+		font-family: 'optima black';
 		font-size: 38px;
 	}
 	#produk #content.bar{
@@ -228,7 +228,7 @@
 	}
 	#projek #wrapper #title h1{
 		margin: 0;
-        font-family: 'roboto black';
+        font-family: 'optima black';
 	}
 	#projek #wrapper .bar{
 		position: relative;
@@ -259,7 +259,7 @@
 	#projek #wrapper .bar a #content #descrip h3{
 		width: 90%;
 		margin: 15px auto;
-		font-family: 'roboto';
+		font-family: 'optima';
         font-weight: bold;
 	}
 	#projek #wrapper .bar a #content #descrip p{

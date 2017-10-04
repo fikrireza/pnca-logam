@@ -48,11 +48,11 @@
 	#list-scrap #wrapper h1{
 		margin: 0;
 		text-transform: uppercase;
-		font-family: 'roboto medium';
+		font-family: 'optima';
 		font-size: 38px;
 	}
 	#list-scrap #wrapper h1 b{
-		font-family: 'roboto black';
+		font-family: 'optima black';
 		font-size: 42px;
 	}
 	#list-scrap #wrapper #list{
@@ -102,7 +102,7 @@
 		text-transform: uppercase;
 		text-align: right;
 		font-size: 26px;
-		font-family: 'roboto black';
+		font-family: 'optima black';
 	}
 	#list-scrap #wrapper #list .bar #descript p{
 		width: 75%;
@@ -149,15 +149,6 @@
 		    border-color: transparent transparent rgba(237,28,36,0) transparent;
 		}
 	/* hover efek */
-	#list-scrap #wrapper #list .owl-controls .owl-buttons div{
-		background-color: rgba(0,0,0,0);
-	}
-	#list-scrap #wrapper #list .owl-controls .owl-buttons div img{
-		width: 20px;
-	}
-	#list-scrap #wrapper #list .owl-controls .owl-buttons .owl-prev{
-		transform: rotateY(180deg);
-	}
 	/* mobile */
 		@media (max-width: 480px) {
 			#list-scrap img#top.teksture{
