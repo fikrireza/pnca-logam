@@ -36,10 +36,10 @@
 		}
 		#kontak #wrapper #title h1{
 			margin: 0;
-			font-family: 'roboto medium';
+			font-family: 'optima';
 		}
 		#kontak #wrapper #title h1 b{
-			font-family: 'roboto';
+			font-family: 'optima';
 	        font-weight: bold;
 		}
 		#kontak #wrapper .bar{
@@ -73,7 +73,7 @@
 		}
 		#kontak #wrapper .bar #temukan-kami h3{
 			margin: 20px auto;
-			font-family: 'roboto medium';
+			font-family: 'optima';
 		}
 		#kontak #wrapper .bar #temukan-kami img{
 			width: 40px;

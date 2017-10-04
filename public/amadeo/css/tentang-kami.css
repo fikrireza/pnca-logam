@@ -42,7 +42,7 @@
 		}
 		#tentang-kami #wrapper #title h1{
 			margin: 0;
-			font-family: 'roboto black';
+			font-family: 'optima black';
 			font-size: 42px;
 		}
 	/* title */
@@ -120,7 +120,7 @@
 	#visi-misi #wrapper .bar #visi h1{
 		margin: 0;
 		margin-bottom: 20px;
-		font-family: 'roboto black';
+		font-family: 'optima black';
 	}
 	#visi-misi #wrapper .bar #visi p{
 		font-family: 'kanit';
@@ -145,7 +145,7 @@
 		margin-top: 20px;
 		margin-bottom: 10px;
 		color: white;
-		font-family: 'roboto black';
+		font-family: 'optima black';
 	}
 	#visi-misi #wrapper .bar #misi #wrapper p{
 		color: white;

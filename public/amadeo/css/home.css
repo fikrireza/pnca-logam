@@ -28,7 +28,7 @@
 			margin: 0;
 			text-transform: uppercase;
 			color: rgb(255,255,255);
-			font-family: 'roboto black';
+			font-family: 'optima black';
 			font-size: 42px;
 		}
 	/* slider */
@@ -41,7 +41,7 @@
 		#header #psp #content{
 			position: absolute;
 			bottom: 30vh;
-			right: 10vw;
+		    right: 6.5%;
 			width: 25vw;
 			z-index: 1;
 			padding: 20px;
@@ -54,10 +54,10 @@
 			margin: 0;
 			font-size: 26px;
 			margin-bottom: 20px;
-			font-family: 'roboto regular';
+			font-family: 'optima';
 		}
 		#header #psp #content p b{
-			font-family: 'roboto';
+			font-family: 'optima';
 	        font-weight: bold;
 		}
 		#header #psp button{
@@ -126,8 +126,9 @@
 	}
 	#tentang-kami #set-up .wrapper img{
 		position: relative;
-		top: -20px;
-		width: 100%;
+	    top: -80px;
+	    width: 115%;
+	    left: -25%;
 	}
 	#tentang-kami #set-up .wrapper #title{
 		position: relative;
@@ -136,7 +137,7 @@
 	#tentang-kami #set-up .wrapper #title h2{
 		margin: 0;
 		color: rgb(0,0,0);
-		font-family: 'roboto black';
+		font-family: 'optima black';
 		font-size: 42px;
 	}
 	#tentang-kami #set-up .wrapper p{
@@ -197,7 +198,7 @@
 	#produk #description #title h2{
 		margin: 0;
 		font-size: 38px;
-		font-family: 'roboto black';
+		font-family: 'optima black';
 	}
 	#produk #description p{
 		width: 75%;
@@ -254,7 +255,7 @@
 			padding-bottom: 20px;
 			border-bottom: 1px solid rgb(46,49,146);
 			font-size: 38px;
-			font-family: 'roboto black';
+			font-family: 'optima black';
 		}
 		#servis #wrapper #title p{
 			width: 55%;
@@ -302,7 +303,7 @@
 			margin-top: 10px;
 			margin-bottom: 20px;
 			font-size: 26px;
-			font-family: 'roboto black';
+			font-family: 'optima black';
 		}
 		#servis #wrapper #sliders .item p{
 			margin: 0 auto;
@@ -399,7 +400,7 @@
 		text-transform: uppercase;
 		color: rgb(255,255,255);
 		font-size: 38px;
-		font-family: 'roboto black';
+		font-family: 'optima black';
 	}
 	#klien #wrapper #sliders .item img.img{
 		height: 40px;

@@ -31,7 +31,7 @@
 		text-transform: uppercase;
 		text-decoration: none;
 		cursor: pointer;
-		font-family: 'roboto';
+		font-family: 'optima';
         font-weight: bold;
 	}
 	.clearfix{
@@ -56,7 +56,6 @@
 			top: 0;
 			width: 100%;
 			z-index: 20;
-			/*transition: all 1.15s;*/
 		}
 		#navigasi #contact,
 		#navigasi #content{
@@ -65,7 +64,6 @@
 			margin: 0 auto;
 			padding-top: 5px;
 			padding-bottom: 5px;
-			/*transition: all 1.15s;*/
 		}
 		#navigasi #contact{
 			text-align: right;
@@ -73,8 +71,7 @@
 		#navigasi #contact label{
 			margin-right: 30px;
 			color: rgb(255,255,255);
-		    font-family: 'kanit';
-		    font-weight: lighter;
+		    font-family: 'optima';
 		}
 		#navigasi #contact label img{
 			width: 15px;
@@ -119,15 +116,13 @@
 		#navigasi #content .wrapper .bar a{
 			margin-left: 5px;
 			margin-right: 5px;
-			font-family: 'roboto regular';
+	        font-family: 'optima black';
 		}
 		#navigasi #content .wrapper .bar.dropdown #dropdown-content{
 			position: absolute;
 			top: 105%;
 			left: -5px;
 			background-color: white;
-			/*width: 100%;*/
-			/*box-shadow: 0px 1px 5px rgb(88,88,88);*/
 			visibility: hidden;
 			opacity: 0;
 			transition: all .51s;

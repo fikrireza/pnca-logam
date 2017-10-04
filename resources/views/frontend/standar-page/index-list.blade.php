@@ -12,9 +12,6 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/form-style.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/standar-list.css') }}">
 
-	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/plugin/owl-carousel/owl.carousel.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/plugin/owl-carousel/owl.theme.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/plugin/owl-carousel/owl.transitions.css') }}">
 @endsection
 
 @section('body')
@@ -29,33 +26,21 @@
 
 			<div id="list">
 				<div class="item">
-					
-					@for($a=0; $a<=$manyItems; $a++)
+					@include('frontend.standar-page.list')
 
-					<div class="bar" style="background-image: url('{!! asset('amadeo/images/standar/'.$items[$a].'.png') !!}');">
-						<div id="descript">
-							<h2>{{ $items[$a] }}</h2>
-							<p>
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-							</p>
-							<div class="text-center">
-								<a class="btn-purple" href="{{ route($routeView, [ 'slug' => str_slug($items[$a], '-') ]) }}">
-									LEBIH DITAIL
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<?php // jika pada urutan akhir dan tidak di akhir produk maka tutup dan buka ?>
-					@if( ($a+1) % 9 == 0 and $a != $manyItems) 
+					<div id="appentList"></div>
 					<div class="clearfix"></div>
 				</div>
-				<div class="item">
-					@endif
-					<?php // jika pada urutan akhir dan tidak di akhir produk maka tutup dan buka ?>
 
-					@endfor
-					<div class="clearfix"></div>
+				<div id="wrapper-load" class="text-center">
+					<div class="ajax-load text-center" style="display:none;">
+						<p>
+							<img src="http://demo.itsolutionstuff.com/plugin/loader.gif">Loading More post
+						</p>
+					</div>
+					<a id="load" class="btn-purple">
+						Tampilkan Selebihnya
+					</a>
 				</div>
 			</div>
 
@@ -69,7 +54,6 @@
 @section('script')
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<script type="text/javascript" src="{{ asset('amadeo/js/func-input-only-number.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('amadeo/plugin/owl-carousel/owl.carousel.min.js') }}"></script>
 
 	<script type="text/javascript">
 		$("#list").owlCarousel({
@@ -80,5 +64,39 @@
 			autoPlay: false,
 		    navigationText : ["<img src='{{ asset('amadeo/images-base/panah.png') }}'>","<img src='{{ asset('amadeo/images-base/panah.png') }}'>"]
 		});
+	</script>
+
+	<script type="text/javascript">
+		var page = 1;
+		$("#load").click(function(){
+		    page++;
+		        loadMoreData(page);
+		});
+
+		function loadMoreData(page){
+		  $.ajax(
+		        {
+		            url: '?page=' + page,
+		            type: "get",
+		            beforeSend: function()
+		            {
+		                $('.ajax-load').show();
+		            }
+		        })
+		        .done(function(data)
+		        {
+		            if(!data.html){
+		                $('.ajax-load').hide();
+			            $('#load').hide();
+		                return;
+		            }
+		            $('.ajax-load').hide();
+		            $("#appentList").append(data.html);
+		        })
+		        .fail(function(jqXHR, ajaxOptions, thrownError)
+		        {
+		              alert('server not responding...');
+		        });
+		}
 	</script>
 @endsection

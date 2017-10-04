@@ -60,7 +60,7 @@ class FrontendController extends Controller
     }
 
     // produk
-      function standarProduk() {
+      function standarProduk(Request $request) {
         $titlePage = "Produk";
         $routeView = "frontend.standar.produk.view";
         $items = [
@@ -85,6 +85,12 @@ class FrontendController extends Controller
           "wiremesh"
         ];
         $manyItems = count($items)-1;
+
+        if ($request->ajax()) {
+        $view = view('frontend.standar-page.list',compact('manyItems', 'items', 'routeView'))->render();
+            return response()->json(['html'=>$view]);
+        }
+
         return view('frontend.standar-page.index-list', compact(
             'items',
             'manyItems',
@@ -98,30 +104,28 @@ class FrontendController extends Controller
         $routeList = "frontend.standar.produk";
         $name = str_replace('-', ' ', $slug);
         
-        $title = explode('-',$slug);
-        $echoTitle = "";
-
-        foreach ($title as $key) {
-          $echoTitle = $echoTitle."<h1>".$key."</h1>";
-        }
-
         return view('frontend.standar-page.index-list-view', compact(
             'titlePage',
             'routeList',
-            'name',
-            'echoTitle'
+            'name'
         ));
       }
     // produk
     
     // servis
-      function standarServis() {
+      function standarServis(Request $request) {
         $titlePage = "Servis";
         $routeView = "frontend.standar.servis.view";
         $items = [
           "Jasa Transportasi"
         ];
         $manyItems = count($items)-1;
+
+        if ($request->ajax()) {
+        $view = view('frontend.standar-page.list',compact('manyItems', 'items', 'routeView'))->render();
+            return response()->json(['html'=>$view]);
+        }
+
         return view('frontend.standar-page.index-list', compact(
             'items',
             'manyItems',
@@ -134,19 +138,11 @@ class FrontendController extends Controller
         $titlePage = "Servis";
         $routeList = "frontend.standar.servis";
         $name = str_replace('-', ' ', $slug);
-        
-        $title = explode('-',$slug);
-        $echoTitle = "";
-
-        foreach ($title as $key) {
-          $echoTitle = $echoTitle."<h1>".$key."</h1>";
-        }
 
         return view('frontend.standar-page.index-list-view', compact(
             'titlePage',
             'routeList',
-            'name',
-            'echoTitle'
+            'name'
         ));
       }
     // servis    
@@ -157,7 +153,7 @@ class FrontendController extends Controller
       return view('frontend.scrap-page.index');
     }
     // servis
-      function scrapServis() {
+      function scrapServis(Request $request) {
         $titlePage = "Servis";
         $titlePageBody = "<h1>Servis</h1><h1><b>SCRAP</b></h1>";
         $routeView = "frontend.scrap.servis.view";
@@ -166,6 +162,12 @@ class FrontendController extends Controller
           "wiremesh"
         ];
         $manyItems = count($items)-1;
+
+        if ($request->ajax()) {
+        $view = view('frontend.scrap-page.list',compact('manyItems', 'items', 'routeView'))->render();
+            return response()->json(['html'=>$view]);
+        }
+
         return view('frontend.scrap-page.index-list', compact(
             'items',
             'manyItems',
@@ -178,19 +180,11 @@ class FrontendController extends Controller
         $titlePage = "Servis";
         $routeList = "frontend.scrap.servis";
         $name = str_replace('-', ' ', $slug);
-        
-        $title = explode('-',$slug);
-        $echoTitle = "";
-
-        foreach ($title as $key) {
-          $echoTitle = $echoTitle."<h1>".$key."</h1>";
-        }
 
         return view('frontend.scrap-page.index-list-view', compact(
             'titlePage',
             'routeList',
-            'name',
-            'echoTitle'
+            'name'
         ));
       }
     // servis
@@ -238,31 +232,29 @@ class FrontendController extends Controller
         $routeList = "frontend.scrap.produk";
         $name = str_replace('-', ' ', $slug);
         
-        $title = explode('-',$slug);
-        $echoTitle = "";
-
-        foreach ($title as $key) {
-          $echoTitle = $echoTitle."<h1>".$key."</h1>";
-        }
-
         return view('frontend.scrap-page.index-list-view', compact(
             'titlePage',
             'routeList',
-            'name',
-            'echoTitle'
+            'name'
         ));
       }
     // produk
     // project
-      function scrapProjek() {
-        $titlePage = "Projek";
-        $titlePageBody = "<h1>PROJEK</h1><h1><b>KAMI</b></h1>";
+      function scrapProjek(Request $request) {
+        $titlePage = "Proyek";
+        $titlePageBody = "<h1>PROYEK</h1><h1><b>KAMI</b></h1>";
         $routeView = "frontend.scrap.projek.view";
         $items = [
           "plat kapal",
           "wiremesh"
         ];
         $manyItems = count($items)-1;
+
+        if ($request->ajax()) {
+        $view = view('frontend.scrap-page.list',compact('manyItems', 'items', 'routeView'))->render();
+            return response()->json(['html'=>$view]);
+        }
+        
         return view('frontend.scrap-page.index-list', compact(
             'items',
             'manyItems',
@@ -272,22 +264,14 @@ class FrontendController extends Controller
         ));
       }
       function scrapProjekView($slug) {
-        $titlePage = "Projek";
+        $titlePage = "Proyek";
         $routeList = "frontend.scrap.projek";
         $name = str_replace('-', ' ', $slug);
-        
-        $title = explode('-',$slug);
-        $echoTitle = "";
-
-        foreach ($title as $key) {
-          $echoTitle = $echoTitle."<h1>".$key."</h1>";
-        }
 
         return view('frontend.scrap-page.index-list-view', compact(
             'titlePage',
             'routeList',
-            'name',
-            'echoTitle'
+            'name'
         ));
       }
     // project
@@ -336,6 +320,5 @@ class FrontendController extends Controller
           }
   	}
   // kontak
-
 
 }

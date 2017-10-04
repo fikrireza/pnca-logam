@@ -66,6 +66,8 @@
 	#item-content #wrapper #content.bar .content h1{
 		margin: 0;
 		text-transform: uppercase;
+		width: 70%;
+		font-family: 'optima';
 	}
 	#item-content #wrapper #content.bar .content p{
 		margin-top: 20px;
