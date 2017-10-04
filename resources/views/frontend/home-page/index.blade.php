@@ -76,6 +76,9 @@
 					>
 					<div style="text-align: center;">
 						<button class="btn-purple" type="submit">SUBMIT</button>
+						@if(Session::has('alert_plp') and Session::get('alert_plp') == "alert-success")
+						<a href="{{ asset('amadeo/contoh.pdf') }}" class="btn-purple" download>Unduh File Disini</a>
+						@endif
 					</div>
 				</form>
 			</div>
@@ -132,22 +135,22 @@
 				</p>
 			</div>
 			<div id="sliders">
-				@for($a=0; $a<=2; $a++)
+				@foreach($servis as $list)
 				<div class="item">
 					<div class="wrapper">
 						<div class="to-center">
-							<a href="{{ route('frontend.standar.servis.view', ['slug'=>'jasa-transportasi']) }}">
+							<a href="{{ route('frontend.standar.servis.view', ['slug'=>$list->slug]) }}">
 								<div class="border">
-									<div class="img" style="background-image: url('{{ asset('amadeo/images-base/transport.jpg') }}');"></div>
+									<div class="img" style="background-image: url('{{ asset('amadeo/images/'.$list->img_url) }}');"></div>
 								</div>
 							</a>
 						</div>
-						<h4>Layanan Antar</h4>
-						<p>kami menyediakan pelayanan armada</p>
-						<p>angkut untuk pengiriman produk penjualan</p>
+						<h4>{{$list->nama}}</h4>
+						{!! Illuminate\Support\Str::words($list->deskripsi, 9, "...</p>") !!}
+
 					</div>
 				</div>
-				@endfor
+				@endforeach
 			</div>
 		</div>
 	</div>

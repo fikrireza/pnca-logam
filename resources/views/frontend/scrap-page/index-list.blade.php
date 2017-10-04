@@ -177,23 +177,18 @@
 			<div id="wrapper">
 				<div class="bar">
 					<div id="padding">
-						@for($a=0; $a<=3; $a++)
+						@foreach($layanan as $list)
 						<div class="items">
 							<div id="box">
-								<div id="img" style="background-image: url('{{ asset('amadeo/images-base/tentang-kami-header.jpg') }}');">
-									<h5>BESI BEKAS</h5>
+								<div id="img" style="background-image: url('{{ asset('amadeo/images/'.$list->img_url) }}');">
+									<h5>{{$list->nama}}</h5>
 								</div>
 								<div id="content">
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat.
-									</p>
+									{!! $list->deskripsi !!}
 								</div>
 							</div>
 						</div>
-						@endfor
+						@endforeach
 					</div>
 				</div>
 				<div class="bar">

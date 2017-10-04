@@ -6,11 +6,15 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Validator;
 
+use App\Models\Layanan;
+
 class FrontendController extends Controller
 {
   // home 
   	function home() {
-  		return view('frontend.home-page.index');
+      $servis = Layanan::where('kategori','SERVIS')->orderBy('id', 'desc')->paginate(5);
+
+  		return view('frontend.home-page.index', compact('servis'));
   	}
     function permintaanListProduk(request $request) {
       $message = [
@@ -43,7 +47,7 @@ class FrontendController extends Controller
           return redirect()
               ->route('frontend.home')
               ->with('autofocus_plp', true)
-              ->with('info_plp', 'berhasil')
+              ->with('info_plp', 'Berhasil')
               ->with('alert_plp', 'alert-success');
     }
   // home 
@@ -63,37 +67,16 @@ class FrontendController extends Controller
       function standarProduk(Request $request) {
         $titlePage = "Produk";
         $routeView = "frontend.standar.produk.view";
-        $items = [
-          "Bajaringan Atap",
-          "Besi As",
-          "besi beton",
-          "besi nako",
-          "besi plat strip",
-          "besi siku",
-          "Chanel U",
-          "channel c",
-          "Hollow Stalbus",
-          "Iwf H beam",
-          "kawat bendrat",
-          "kawat beton",
-          "kawat putih",
-          "pipa galvanished",
-          "Pipa Hitam",
-          "pipa seamless schedule",
-          "plat hitam",
-          "plat kapal",
-          "wiremesh"
-        ];
-        $manyItems = count($items)-1;
+        
+        $layanan = Layanan::where('kategori','PRODUK')->orderBy('nama', 'asc')->paginate(6);
 
         if ($request->ajax()) {
-        $view = view('frontend.standar-page.list',compact('manyItems', 'items', 'routeView'))->render();
+        $view = view('frontend.standar-page.list',compact('layanan', 'routeView'))->render();
             return response()->json(['html'=>$view]);
         }
 
         return view('frontend.standar-page.index-list', compact(
-            'items',
-            'manyItems',
+            'layanan',
             'titlePage',
             'routeView'
         ));
@@ -102,12 +85,12 @@ class FrontendController extends Controller
       function standarProdukView($slug) {
         $titlePage = "Produk";
         $routeList = "frontend.standar.produk";
-        $name = str_replace('-', ' ', $slug);
+        $layanan = Layanan::where('slug',$slug)->first();
         
         return view('frontend.standar-page.index-list-view', compact(
             'titlePage',
             'routeList',
-            'name'
+            'layanan'
         ));
       }
     // produk
@@ -116,19 +99,16 @@ class FrontendController extends Controller
       function standarServis(Request $request) {
         $titlePage = "Servis";
         $routeView = "frontend.standar.servis.view";
-        $items = [
-          "Jasa Transportasi"
-        ];
-        $manyItems = count($items)-1;
+       
+        $layanan = Layanan::where('kategori','SERVIS')->orderBy('nama', 'asc')->paginate(6);
 
         if ($request->ajax()) {
-        $view = view('frontend.standar-page.list',compact('manyItems', 'items', 'routeView'))->render();
+        $view = view('frontend.standar-page.list',compact('layanan', 'routeView'))->render();
             return response()->json(['html'=>$view]);
         }
 
         return view('frontend.standar-page.index-list', compact(
-            'items',
-            'manyItems',
+            'layanan',
             'titlePage',
             'routeView'
         ));
@@ -137,12 +117,12 @@ class FrontendController extends Controller
       function standarServisView($slug) {
         $titlePage = "Servis";
         $routeList = "frontend.standar.servis";
-        $name = str_replace('-', ' ', $slug);
+        $layanan = Layanan::where('slug',$slug)->first();
 
         return view('frontend.standar-page.index-list-view', compact(
             'titlePage',
             'routeList',
-            'name'
+            'layanan'
         ));
       }
     // servis    
@@ -150,27 +130,24 @@ class FrontendController extends Controller
 
   // scrap
     function scrapIndex() {
-      return view('frontend.scrap-page.index');
+      $proyek = Layanan::where('kategori', 'SCRAPPROYEK')->orderBy('id', 'desc')->paginate(3);
+      return view('frontend.scrap-page.index', compact('proyek'));
     }
     // servis
       function scrapServis(Request $request) {
         $titlePage = "Servis";
         $titlePageBody = "<h1>Servis</h1><h1><b>SCRAP</b></h1>";
         $routeView = "frontend.scrap.servis.view";
-        $items = [
-          "plat kapal",
-          "wiremesh"
-        ];
-        $manyItems = count($items)-1;
+        
+        $layanan = Layanan::where('kategori','SCRAPSERVIS')->orderBy('nama', 'asc')->paginate(6);
 
         if ($request->ajax()) {
-        $view = view('frontend.scrap-page.list',compact('manyItems', 'items', 'routeView'))->render();
+        $view = view('frontend.scrap-page.list',compact('layanan', 'routeView'))->render();
             return response()->json(['html'=>$view]);
         }
 
         return view('frontend.scrap-page.index-list', compact(
-            'items',
-            'manyItems',
+            'layanan',
             'titlePage',
             'titlePageBody',
             'routeView'
@@ -179,12 +156,12 @@ class FrontendController extends Controller
       function scrapServisView($slug) {
         $titlePage = "Servis";
         $routeList = "frontend.scrap.servis";
-        $name = str_replace('-', ' ', $slug);
+        $layanan = Layanan::where('slug',$slug)->first();
 
         return view('frontend.scrap-page.index-list-view', compact(
             'titlePage',
             'routeList',
-            'name'
+            'layanan'
         ));
       }
     // servis
@@ -193,11 +170,9 @@ class FrontendController extends Controller
         $titlePage = "Produk";
         $titlePageBody = "<h1>PRODUK</h1><h1><b>SCRAP</b></h1>";
         $routeView = "frontend.scrap.produk.view";
-        $items = [
-          "plat kapal",
-          "wiremesh"
-        ];
-        $manyItems = count($items)-1;
+        
+        $layanan = Layanan::where('kategori','SCRAPPRODUK')->orderBy('nama', 'asc')->paginate(6);
+
         $kategoriBesiName = [
             "Kategori Super",
             "Kategori A",
@@ -217,8 +192,7 @@ class FrontendController extends Controller
         $manyKategori = count($kategoriBesiName)-1;
 
         return view('frontend.scrap-page.index-list', compact(
-            'items',
-            'manyItems',
+            'layanan',
             'titlePage',
             'titlePageBody',
             'routeView',
@@ -227,37 +201,32 @@ class FrontendController extends Controller
             'manyKategori'
         ));
       }
-      function scrapProdukView($slug) {
-        $titlePage = "Produk";
-        $routeList = "frontend.scrap.produk";
-        $name = str_replace('-', ' ', $slug);
+      // function scrapProdukView($slug) {
+      //   $titlePage = "Produk";
+      //   $routeList = "frontend.scrap.produk";
+      //   $name = str_replace('-', ' ', $slug);
         
-        return view('frontend.scrap-page.index-list-view', compact(
-            'titlePage',
-            'routeList',
-            'name'
-        ));
-      }
+      //   return view('frontend.scrap-page.index-list-view', compact(
+      //       'titlePage',
+      //       'routeList',
+      //       'name'
+      //   ));
+      // }
     // produk
     // project
       function scrapProjek(Request $request) {
         $titlePage = "Proyek";
         $titlePageBody = "<h1>PROYEK</h1><h1><b>KAMI</b></h1>";
         $routeView = "frontend.scrap.projek.view";
-        $items = [
-          "plat kapal",
-          "wiremesh"
-        ];
-        $manyItems = count($items)-1;
+        $layanan = Layanan::where('kategori','SCRAPPROYEK')->orderBy('nama', 'asc')->paginate(6);
 
         if ($request->ajax()) {
-        $view = view('frontend.scrap-page.list',compact('manyItems', 'items', 'routeView'))->render();
+        $view = view('frontend.scrap-page.list',compact('layanan', 'routeView'))->render();
             return response()->json(['html'=>$view]);
         }
-        
+
         return view('frontend.scrap-page.index-list', compact(
-            'items',
-            'manyItems',
+            'layanan',
             'titlePage',
             'titlePageBody',
             'routeView'
@@ -266,12 +235,12 @@ class FrontendController extends Controller
       function scrapProjekView($slug) {
         $titlePage = "Proyek";
         $routeList = "frontend.scrap.projek";
-        $name = str_replace('-', ' ', $slug);
+        $layanan = Layanan::where('slug',$slug)->first();
 
         return view('frontend.scrap-page.index-list-view', compact(
             'titlePage',
             'routeList',
-            'name'
+            'layanan'
         ));
       }
     // project

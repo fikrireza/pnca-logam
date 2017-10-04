@@ -64,19 +64,19 @@
 				<div id="border-left"></div>
 			</div>
 
-			@for($a=0; $a<=2; $a++)
+			@foreach($proyek as $list)
 			<div class="bar">
-				<a href="{{ route('frontend.scrap.projek') }}">
+				<a href="{{ route('frontend.scrap.projek.view', ['slug'=>$list->slug]) }}">
 					<div id="content">
-						<div id="img" style="background-image: url('{{ asset('amadeo/images-base/servis.jpg') }}');"></div>
+						<div id="img" style="background-image: url('{{ asset('amadeo/images/'.$list->img_url) }}');"></div>
 						<div id="descrip">
-							<h3>Pembongkaran Pabrik</h3>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+							<h3>{{$list->nama}}</h3>
+							{!! Illuminate\Support\Str::words($list->deskripsi, 15, "...</p>") !!}
 						</div>
 					</div>
 				</a>
 			</div>
-			@endfor
+			@endforeach
 			<div class="clearfix"></div>
 		</div>
 	</div>

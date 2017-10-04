@@ -35,7 +35,7 @@
 				<div id="wrapper-load" class="text-center">
 					<div class="ajax-load text-center" style="display:none;">
 						<p>
-							<img src="http://demo.itsolutionstuff.com/plugin/loader.gif">Loading More post
+							<img src="http://demo.itsolutionstuff.com/plugin/loader.gif"> Memuat Tampilan
 						</p>
 					</div>
 					<a id="load" class="btn-purple">

@@ -1,7 +1,7 @@
 @extends('frontend._layouts.basic')
 
 @section('title')
-	<title>Panca Logam | Scrap {!! $titlePage !!} {{ $name }}</title>
+	<title>Panca Logam | Scrap {!! $titlePage !!} {{ $layanan->nama }}</title>
 @endsection
 
 @section('meta')
@@ -22,13 +22,11 @@
 		<img id="bottom" class="teksture" src="{{ asset('amadeo/images-base/tekstur-red.png') }}">
 
 		<div id="wrapper">
-			<div id="img" class="bar" style="background-image: url('{{ asset('amadeo/images/standar/'.$name.'.png') }}');"></div>
+			<div id="img" class="bar" style="background-image: url('{{ asset('amadeo/images/'.$layanan->img_url) }}');"></div>
 			<div id="content" class="bar">
 				<div class="content">
-					<h1>{{ $name }}</h1>
-					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-					</p>
+					<h1>{{ $layanan->nama }}</h1>
+					{!! $layanan->deskripsi !!}
 					<a href="{{ route($routeList) }}">
 						<img src="{{ asset('amadeo/images-base/panah.png') }}">
 					</a>
