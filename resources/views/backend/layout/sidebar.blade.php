@@ -23,27 +23,11 @@
         <h3>General</h3>
         <ul class="nav side-menu">
           <li class="{{ Route::is('dashboard') ? 'active' : '' }}">
-            <a href="{{ route('dashboard') }}"><i class="fa fa-home"></i> Dashboard </a>
+            <a href="{{ route('dashboard') }}"><i class="fa fa-home"></i> Dashbor </a>
           </li>
-          {{-- @if (Auth::user()->can('read-provider') || Auth::user()->can('read-provider-prefix'))
-          <li class="{{ Route::is('provider*') ? 'active' : '' }}">
-            <a>
-              <i class="fa fa-phone"></i> Manage Provider <span class="fa fa-chevron-down"></span>
-            </a>
-            <ul class="nav child_menu" style="{{ Route::is('provider*') ? 'display: block;' : '' }}">
-              @can('read-provider')
-              <li class="{{ Route::is('provider.index') ? 'current-page' : '' }}">
-                <a href="{{ route('provider.index') }}">Provider</a>
-              </li>
-              @endcan
-              @can('read-provider-prefix')
-              <li class="{{ Route::is('provider-prefix.index') ? 'current-page' : '' }}">
-                <a href="{{ route('provider-prefix.index') }}">Provider Prefix</a>
-              </li>
-              @endcan
-            </ul>
+          <li class="{{ Route::is('layanan.*') ? 'active' : '' }}">
+            <a href="{{ route('layanan.index') }}"><i class="fa fa-folder"></i> Layanan</a>
           </li>
-          @endif --}}
         </ul>
       </div>
       <div class="menu_section">

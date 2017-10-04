@@ -12,13 +12,13 @@
 */
 
 // START FRONTEND
-  
-  // home 
+
+  // home
     Route::get('/', 'Frontend\FrontendController@home')
       ->name('frontend.home');
     Route::post('/permintaan-list-produk', 'Frontend\FrontendController@permintaanListProduk')
       ->name('frontend.permintaan.list.produk');
-  // home 
+  // home
 
   // tentang kami
     Route::get('/tentang-kami', 'Frontend\FrontendController@tentangKami')
@@ -67,7 +67,7 @@
     Route::post('/kontak/simpan', 'Frontend\FrontendController@kontakSimpan')
       ->name('frontend.kontak.simpan');
   // kontak
-  
+
 // END FRONTEND
 
 // START BACKEND
@@ -83,10 +83,16 @@
 
       Route::get('dashboard', 'Backend\DashboardController@index')->name('dashboard');
 
+      Route::get('layanan', 'Backend\LayananController@index')->name('layanan.index');
+      Route::post('layanan', 'Backend\LayananController@store')->name('layanan.store');
+      Route::get('layanan/hapus/{id}', 'Backend\LayananController@delete')->name('layanan.delete');
+      Route::get('layanan/{id}', 'Backend\LayananController@edit')->name('layanan.edit');
+      Route::post('layanan/ubah', 'Backend\LayananController@update')->name('layanan.update');
+
       Route::get('account', 'Backend\AccountController@index')->name('account.index');
       Route::post('account', 'Backend\AccountController@store')->name('account.store');
       Route::patch('account/update', 'Backend\AccountController@update')->name('account.update');
-      
+
       Route::get('account/profile', 'Backend\AccountController@profile')->name('account.profile');
 
     });
