@@ -16,9 +16,13 @@ class CreateGeneralTable extends Migration
         Schema::create('amd_general', function (Blueprint $table) {
             $table->increments('id');
             $table->text('produk')->nullable();
+            $table->string('img_produk');
             $table->text('servis')->nullable();
+            $table->string('img_servis');
             $table->text('scrapproduk')->nullable();
+            $table->string('img_scrapproduk');
             $table->text('scrapservis')->nullable();
+            $table->string('img_scrapservis');
             $table->string('email_to')->nullable();
             $table->string('email_cc')->nullable();
             $table->timestamps();

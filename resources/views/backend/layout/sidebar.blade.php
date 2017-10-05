@@ -28,6 +28,15 @@
           <li class="{{ Route::is('layanan.*') ? 'active' : '' }}">
             <a href="{{ route('layanan.index') }}"><i class="fa fa-folder"></i> Layanan</a>
           </li>
+          <li class="{{ Route::is('account*') ? 'active' : '' }}">
+            <a>
+              <i class="fa fa-gear"></i> General <span class="fa fa-chevron-down"></span>
+            </a>
+            <ul class="nav child_menu" style="{{ Route::is('general.*') ? 'display: block;' : '' }}">
+              <li class="{{ Route::is('general.menu') ? 'current-page' : '' }}"><a href="{{ route('general.menu') }}">Menu</a></li>
+              <li class="{{ Route::is('general.email') ? 'current-page' : '' }}"><a href="{{ route('general.email') }}">Email</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
       <div class="menu_section">

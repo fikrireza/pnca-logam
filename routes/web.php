@@ -89,6 +89,12 @@
       Route::get('layanan/{id}', 'Backend\LayananController@edit')->name('layanan.edit');
       Route::post('layanan/ubah', 'Backend\LayananController@update')->name('layanan.update');
 
+      Route::get('menu', 'Backend\GeneralController@menu')->name('general.menu');
+      Route::post('menu', 'Backend\GeneralController@menuUpdate')->name('general.menuUpdate');
+
+      Route::get('email', 'Backend\GeneralController@email')->name('general.email');
+      Route::post('email', 'Backend\GeneralController@emailUpdate')->name('general.emailUpdate');
+
       Route::get('kontak', 'Backend\KontakController@index')->name('kontak.index');
 
       Route::get('account', 'Backend\AccountController@index')->name('account.index');

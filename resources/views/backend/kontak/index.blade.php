@@ -1,16 +1,12 @@
 @extends('backend.layout.master')
 
 @section('title')
-  <title>Panca Logam | Layanan</title>
+  <title>Panca Logam | Kontak</title>
 @endsection
 
 @section('headscript')
 <link href="{{ asset('backend/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css') }}" rel="stylesheet">
 <link href="{{ asset('backend/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css') }}" rel="stylesheet">
-<link href="{{ asset('backend/vendors/pnotify/dist/pnotify.css') }}" rel="stylesheet">
-<link href="{{ asset('backend/vendors/pnotify/dist/pnotify.nonblock.css') }}" rel="stylesheet">
-<script src="{{asset('backend/vendors/ckeditor/ckeditor.js')}}"></script>
-<script src="{{asset('backend/vendors/ckfinder/ckfinder.js')}}"></script>
 @endsection
 
 @section('content')
