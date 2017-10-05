@@ -22,22 +22,20 @@
 			<img id="bottom" class="teksture" src="{{ asset('amadeo/images-base/tekstur-red.png') }}">
 			<div id="wrapper">
 				<h1>SERVIS</h1>
-				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				</p>
+				{!! $GeneralConfig->scrapservis !!}
 				<div class="text-center">
 					<a class="btn-purple" href="{{ route('frontend.scrap.servis') }}">SEMUA SERVIS</a>
 				</div>
 			</div>
 		</div>
 		<div id="img" class="bar">
-			<div id="img" style="background-image: url('{{ asset('amadeo/images-base/servis.jpg') }}');"></div>
+			<div id="img" style="background-image: url('{{ asset('amadeo/images/'.$GeneralConfig->img_scrapservis) }}');"></div>
 		</div>
 		<div class="clearfix"></div>
 	</div>
 
 	<div id="produk">
-		<div id="img" class="bar" style="background-image: url('{{ asset('amadeo/images-base/pipa.jpg') }}');">
+		<div id="img" class="bar" style="background-image: url('{{ asset('amadeo/images/'.$GeneralConfig->img_scrapproduk) }}');">
 			<div id="titile">
 				<h1>SCRAP</h1>
 				<h1>PRODUK</h1>
@@ -45,9 +43,7 @@
 		</div>
 		<div id="content" class="bar">
 			<div id="descrip">
-				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				</p>
+				{!! $GeneralConfig->scrapproduk !!}
 			</div>
 			<div class="text-center">
 				<a class="btn-purple" href="{{ route('frontend.scrap.produk') }}">SEMUA PRODUK</a>

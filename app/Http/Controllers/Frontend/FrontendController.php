@@ -4,9 +4,13 @@ namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use DB;
+use Mail;
 use Validator;
 
+use App\Models\General;
 use App\Models\Layanan;
+use App\Models\Kontak;
 
 class FrontendController extends Controller
 {
@@ -18,37 +22,44 @@ class FrontendController extends Controller
   	}
     function permintaanListProduk(request $request) {
       $message = [
-            'name_plp.required'   => 'dibutuhkan',
-            'name_plp.min'    => 'terlalu pendek',
-            'email_plp.required'  => 'dibutuhkan',
-            'email_plp.email'   => 'format email salah',
-            'phone_plp.required'  => 'dibutuhkan',
-            'phone_plp.min'     => 'terlalu pendek',
-            'phone_plp.max'     => 'terlalu panjang',
-          ];
+        'name_plp.required'   => 'dibutuhkan',
+        'name_plp.min'    => 'terlalu pendek',
+        'email_plp.required'  => 'dibutuhkan',
+        'email_plp.email'   => 'format email salah',
+        'phone_plp.required'  => 'dibutuhkan',
+        'phone_plp.min'     => 'terlalu pendek',
+        'phone_plp.max'     => 'terlalu panjang',
+      ];
 
-          $validator = Validator::make($request->all(), [
-            'name_plp'  => 'required|min:3',
-            'email_plp'   => 'required|email',
-            'phone_plp'   => 'required|min:8|max:22',
-          ], $message);
+      $validator = Validator::make($request->all(), [
+        'name_plp'  => 'required|min:3',
+        'email_plp'   => 'required|email',
+        'phone_plp'   => 'required|min:8|max:22',
+      ], $message);
 
-          if($validator->fails())
-          {
-            return redirect()
-              ->route('frontend.home')
-              ->withErrors($validator)
-              ->withInput()
-              ->with('autofocus_plp', true)
-              ->with('info_plp', 'terjadi kesalahan...!')
-              ->with('alert_plp', 'alert-danger');
-          }
+      if($validator->fails())
+      {
+        return redirect()
+          ->route('frontend.home')
+          ->withErrors($validator)
+          ->withInput()
+          ->with('autofocus_plp', true)
+          ->with('info_plp', 'terjadi kesalahan...!')
+          ->with('alert_plp', 'alert-danger');
+      }
 
-          return redirect()
-              ->route('frontend.home')
-              ->with('autofocus_plp', true)
-              ->with('info_plp', 'Berhasil')
-              ->with('alert_plp', 'alert-success');
+      $save = new Kontak;
+      $save->nama = $request->name_plp;
+      $save->email = $request->email_plp;
+      $save->telepon = $request->phone_plp;
+      $save->subyek = "Unduh File";
+      $save->save();
+       
+      return redirect()
+          ->route('frontend.home')
+          ->with('autofocus_plp', true)
+          ->with('info_plp', 'Berhasil')
+          ->with('alert_plp', 'alert-success');
     }
   // home 
 
@@ -60,7 +71,9 @@ class FrontendController extends Controller
 
   // standar
     function standarIndex() {
-      return view('frontend.standar-page.index');
+      $GeneralConfig = General::first();
+
+      return view('frontend.standar-page.index', compact('GeneralConfig'));
     }
 
     // produk
@@ -130,8 +143,9 @@ class FrontendController extends Controller
 
   // scrap
     function scrapIndex() {
+      $GeneralConfig = General::first();
       $proyek = Layanan::where('kategori', 'SCRAPPROYEK')->orderBy('id', 'desc')->paginate(3);
-      return view('frontend.scrap-page.index', compact('proyek'));
+      return view('frontend.scrap-page.index', compact('proyek', 'GeneralConfig'));
     }
     // servis
       function scrapServis(Request $request) {
@@ -252,41 +266,90 @@ class FrontendController extends Controller
   	}
 
   	function kontakSimpan(request $request) {
+      
   		$message = [
-            'name.required' 	=> 'dibutuhkan',
-            'name.min' 		=> 'terlalu pendek',
-            'email.required'  => 'dibutuhkan',
-            'email.email'  	=> 'format email salah',
-            'telpon.required'	=> 'dibutuhkan',
-            'telpon.min' 		=> 'terlalu pendek',
-            'telpon.max' 		=> 'terlalu panjang',
-            'subject.required'=> 'dibutuhkan',
-            'subject.min' 	=> 'terlalu pendek',
-            'pesan.required'	=> 'dibutuhkan',
-            'pesan.min' 		=> 'terlalu pendek',
-            'pesan.max' 		=> 'terlalu panjang',
-            'g-recaptcha-response.required'  => 'dibutuhkan',
-          ];
+        'name.required' 	=> 'dibutuhkan',
+        'name.min' 		=> 'terlalu pendek',
+        'email.required'  => 'dibutuhkan',
+        'email.email'  	=> 'format email salah',
+        'telpon.required'	=> 'dibutuhkan',
+        'telpon.min' 		=> 'terlalu pendek',
+        'telpon.max' 		=> 'terlalu panjang',
+        'subject.required'=> 'dibutuhkan',
+        'subject.min' 	=> 'terlalu pendek',
+        'pesan.required'	=> 'dibutuhkan',
+        'pesan.min' 		=> 'terlalu pendek',
+        'pesan.max' 		=> 'terlalu panjang',
+        'g-recaptcha-response.required'  => 'dibutuhkan',
+      ];
 
-          $validator = Validator::make($request->all(), [
-            'name' 	=> 'required|min:3',
-            'email' 	=> 'required|email',
-            'telpon'	=> 'required|min:8|max:22',
-            'subject'	=> 'required|min:3',
-            'pesan' 	=> 'required|min:10|max:580',
-            'g-recaptcha-response' => 'required',
-          ], $message);
+      $validator = Validator::make($request->all(), [
+        'name' 	=> 'required|min:3',
+        'email' 	=> 'required|email',
+        'telpon'	=> 'required|min:8|max:22',
+        'subject'	=> 'required|min:3',
+        'pesan' 	=> 'required|min:10|max:580',
+        'g-recaptcha-response' => 'required',
+      ], $message);
 
-          if($validator->fails())
-          {
-            return redirect()
-            	->route('frontend.kontak')
-            	->withErrors($validator)
-            	->withInput()
-            	->with('autofocus', true)
-            	->with('info', 'terjadi kesalahan...!')
-            	->with('alert', 'alert-danger');
-          }
+      if($validator->fails())
+      {
+        return redirect()
+        	->route('frontend.kontak')
+        	->withErrors($validator)
+        	->withInput()
+        	->with('autofocus', true)
+        	->with('info', 'terjadi kesalahan...!')
+        	->with('alert', 'alert-danger');
+      }
+
+      if(!str_contains($request->email, ['gmail', 'yahoo', 'ymail', 'hotmail'])){
+        return redirect()
+          ->route('frontend.kontak')
+          ->with('autofocus', true)
+          ->with('info', 'Terimakasih')
+          ->with('alert', 'alert-success');
+      }
+      if(str_contains($request->pesan, ['href', 'http', 'https', 'porn', 'pocker'])){
+        return redirect()
+          ->route('frontend.kontak')
+          ->with('autofocus', true)
+          ->with('info', 'Terimakasih')
+          ->with('alert', 'alert-success');
+      }
+
+      DB::transaction(function() use($request){
+        
+        $save = new Kontak;
+        $save->nama = $request->name;
+        $save->email = $request->email;
+        $save->telepon = $request->telpon;
+        $save->subyek = $request->subject;
+        $save->pesan = $request->pesan;
+        $save->save();
+
+        $getSendTo = General::first();
+
+        try {
+          Mail::send('frontend.kontak-page.mail', ['request' => $request], function($message) use ($request, $getSendTo) {
+            $message->from('administrator@pancalogam.com', 'Administrator')
+                    ->to($getSendTo->email_to);
+            if ($getSendTo->email_cc != null) {
+                    $message->cc($getSendTo->email_cc);
+            }
+                    $message->subject('New Inbox From : '.$request->email);
+          });
+        } catch (\Exception $e) {
+          // dd($e);
+        }
+
+      });
+
+      return redirect()
+        ->route('frontend.kontak')
+        ->with('autofocus', true)
+        ->with('info', 'Berhasil')
+        ->with('alert', 'alert-success');
   	}
   // kontak
 
