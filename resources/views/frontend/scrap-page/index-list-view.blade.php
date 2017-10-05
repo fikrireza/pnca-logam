@@ -28,7 +28,7 @@
 					<h1>{{ $layanan->nama }}</h1>
 					{!! $layanan->deskripsi !!}
 					<a href="{{ route($routeList) }}">
-						<img src="{{ asset('amadeo/images-base/panah.png') }}">
+						<img src="{{ asset('amadeo/images-base/panah-merah.png') }}">
 					</a>
 					<a href="{{ route($routeList) }}">
 						SEMUA {{$titlePage}}

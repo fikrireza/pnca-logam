@@ -106,7 +106,7 @@
 								@if($errors->has('g-recaptcha-response'))
 									<span>{{ $errors->first('g-recaptcha-response')}}</span>
 								@endif
-								<div class="g-recaptcha" data-sitekey="6LcoAS4UAAAAAHQ-NpZB7oZIeQ_IH-BUL6NuZqpw" data-callback="submitThisForm"></div>
+								<div class="g-recaptcha" data-sitekey="6LfHAS4UAAAAAIR34oekoJOvk9WzQhc6utDRv9vK" data-callback="submitThisForm"></div>
 								<button id="submit" class="btn-purple" type="submit">SUBMIT</button>
 								<div class="clearfix"></div>
 							</div>
@@ -142,9 +142,9 @@
 							</div>
 						</div>
 						<div id="temukan-kami">
-							<img src="{{ asset('amadeo/images-base/logo-fb.png') }}">
-							<img src="{{ asset('amadeo/images-base/logo-ig.png') }}">
-							<img src="{{ asset('amadeo/images-base/logo-youtube.png') }}">
+							<img src="{{ asset('amadeo/images-base/logo-fb-putih.png') }}">
+							<img src="{{ asset('amadeo/images-base/logo-ig-putih.png') }}">
+							<img src="{{ asset('amadeo/images-base/logo-youtube-putih.png') }}">
 						</div>
 					</div>
 				</div>
