@@ -33,6 +33,9 @@
       <div class="menu_section">
         <h3>Extra</h3>
         <ul class="nav side-menu">
+          <li class="{{ Route::is('kontak.*') ? 'active' : '' }}">
+            <a href="{{ route('kontak.index') }}"><i class="fa fa-envelope"></i> Kontak</a>
+          </li>
           <li class="{{ Route::is('account*') ? 'active' : '' }}">
             <a>
               <i class="fa fa-users"></i> Manage Account <span class="fa fa-chevron-down"></span>

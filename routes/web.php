@@ -89,6 +89,8 @@
       Route::get('layanan/{id}', 'Backend\LayananController@edit')->name('layanan.edit');
       Route::post('layanan/ubah', 'Backend\LayananController@update')->name('layanan.update');
 
+      Route::get('kontak', 'Backend\KontakController@index')->name('kontak.index');
+
       Route::get('account', 'Backend\AccountController@index')->name('account.index');
       Route::post('account', 'Backend\AccountController@store')->name('account.store');
       Route::patch('account/update', 'Backend\AccountController@update')->name('account.update');
